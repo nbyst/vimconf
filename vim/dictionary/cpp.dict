@@ -1,0 +1,27 @@
+class
+Glib
+gtkmm
+Sim
+
+  private:
+  public:
+  protected:
+  private
+  public
+  protected
+
+virtual
+friend
+<typeinfo>
+<iostream>
+std::cout
+endl
+std::cin
+std::string
+
+string
+
+#include<iostream>
+#include<typeinfo>
+
+

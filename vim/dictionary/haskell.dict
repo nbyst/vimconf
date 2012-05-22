@@ -1,0 +1,26 @@
+#型
+Integer
+Char
+String
+Bool
+    True
+		False
+Int型
+Integer型
+Double型
+
+
+
+#関数
+mod
+type
+data
+head
+
+#多分予約語だったり、そうじゃないのも
+xmonad
+main
+putStrLn
+do
+where
+let
