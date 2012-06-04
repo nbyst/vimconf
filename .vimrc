@@ -9,7 +9,7 @@ call vundle#rc()
 " original repos on github
 Bundle 'git://github.com/gmarik/vundle.git'
 Bundle 'ujihisa/quickrun'
-Bundle 'git://github.com/Shougo/vimproc.git'
+"Bundle 'git://github.com/Shougo/vimproc.git'
 Bundle 'git://github.com/Shougo/neocomplcache.git'
 Bundle 'git://github.com/Shougo/unite.vim.git'
 Bundle 'git://github.com/Shougo/vimfiler.git'
