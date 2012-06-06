@@ -43,6 +43,7 @@ set expandtab
 set tabpagemax=15
 
 syntax on
+set fdm=indent
 
 "colorscheme 関係のインストール
 set background=dark
@@ -153,7 +154,7 @@ set completeopt=menuone
 "************************
 "Unite Settings
   " バッファ一覧
-nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+nnoremap <silent> ,b :<C-u>Unite buffer<CR>
 "" ファイル一覧
 nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 "" レジスタ一覧
