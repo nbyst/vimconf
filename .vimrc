@@ -41,6 +41,7 @@ set incsearch
 set title
 set expandtab
 set tabpagemax=15
+set fdm=indent
 
 syntax on
 set fdm=indent
