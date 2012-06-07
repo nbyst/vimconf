@@ -84,7 +84,8 @@ nnoremap j gj
 nnoremap k gk
 "tab moves
 nnoremap <C-l> gt
-nnoremap <C-h> gT
+nnoremap tl gt
+nnoremap th gT
 "Tabキーでたtabfindを表示
 nnoremap <Tab> :tabf<space>
 
@@ -154,7 +155,7 @@ set completeopt=menuone
 "************************
 "Unite Settings
   " バッファ一覧
-nnoremap <silent> ,b :<C-u>Unite buffer<CR>
+nnoremap <silent> bb :<C-u>Unite buffer<CR>
 "" ファイル一覧
 nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 "" レジスタ一覧
