@@ -44,6 +44,12 @@ set tabpagemax=15
 set fdm=indent
 
 syntax on
+
+"status line compl
+set wildmenu
+set wildmode=list:longest
+
+"fold mode setting
 set fdm=indent
 
 "colorscheme 関係のインストール
