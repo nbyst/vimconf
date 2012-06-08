@@ -47,6 +47,7 @@ syntax on
 
 "colorscheme 関係のインストール
 set background=dark
+colorscheme desert
 " Set manual completion length.                                                    [0/0]
 let g:neocomplcache_manual_completion_start_length = 9
 "_区切りの補完を有効化
