@@ -57,7 +57,7 @@ set completeopt=menuone
 "************************
 "Unite Settings
   " バッファ一覧
-nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+nnoremap <silent> bf :<C-u>Unite buffer<CR>
 "" ファイル一覧
 nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 "" レジスタ一覧
