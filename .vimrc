@@ -29,6 +29,8 @@ set nocompatible
 "->他のアプリケーションでも使える
 set clipboard+=unnamed
 
+nnoremap j gj
+nnoremap k gk
 
 set tabstop=2 sw=2 sts=2
 set showmode
@@ -40,6 +42,11 @@ set incsearch
 set title
 set expandtab
 set tabpagemax=15
+"set cursorcolumn
+set cursorline
+
+set wildmenu
+set wildmode=list:longest
 
 set fdm=indent
 
@@ -47,7 +54,7 @@ syntax on
 
 "colorscheme 関係のインストール
 set background=dark
-colorscheme desert
+colorscheme morning
 " Set manual completion length.                                                    [0/0]
 let g:neocomplcache_manual_completion_start_length = 9
 "_区切りの補完を有効化
