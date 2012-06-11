@@ -52,7 +52,8 @@ set fdm=indent
 
 syntax on
 
-" Set manual completion length.                                                    [0/0]
+set mouse=a
+
 let g:neocomplcache_manual_completion_start_length = 9
 "_区切りの補完を有効化
 let g:neocomplcache_enable_underbar_completion = 1
@@ -69,6 +70,7 @@ nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
 "" 最近使用したファイル一覧
 nnoremap <silent> ,um :<C-u>Unite file_mru<CR>
+
 if filereadable(expand('~/vimconf/.local.vimrc'))
     source ~/vimconf/.local.vimrc
 endif
