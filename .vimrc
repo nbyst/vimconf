@@ -42,6 +42,8 @@ set incsearch
 set title
 set expandtab
 set tabpagemax=15
+
+
 "set cursorcolumn
 set cursorline
 
@@ -54,11 +56,49 @@ syntax on
 
 set mouse=a
 
-let g:neocomplcache_manual_completion_start_length = 9
-"_区切りの補完を有効化
-let g:neocomplcache_enable_underbar_completion = 1
-"補完ウィンドウの設定 :help completeopt
-set completeopt=menuone
+"日本語の行の連結時には空白を入力しない。
+set formatoptions+=mM
+"□や○の文字があってもカーソル位置がずれないようにする。
+set ambiwidth=double
+"画面最後の行をできる限り表示する。
+set display+=lastline
+
+"----------------------------------
+" map 
+"----------------------------------
+nnoremap tl gt
+nnoremap th gT
+"Tabキーでたtabfindを表示
+nnoremap <Tab> :tabf<space>
+
+"ファイル名を表示(full path)
+nnoremap fn :echo expand("%:p")<CR>
+"ファイルタイプを表示
+nnoremap ft :echo &ft<CR>
+
+"for javascript
+au FileType javascript set ts=2 sw=2 expandtab
+au BufNewFile *.js set ft=javascript fenc=utf-8
+
+
+"VimFiler
+nnoremap <silent> ,vf :VimFiler<CR>
+
+"********************************************************************
+"「Rename newfilename」で変更したいファイル名を指定して実行します。
+"!を付けると強制保存して変更
+command! -nargs=+ -bang -complete=file Rename let pbnr=fnamemodify(bufname('%'), ':p')|exec 'f '.escape(<q-args>, ' ')|w<bang>|call delete(pbnr)
+"********************************************************************
+"xvkbdを使ってEsc押したら自動的にIMEをOFFする設定
+inoremap <silent> <esc> <esc>:call ForceImeOff()<cr>
+function! ForceImeOff()
+		let imeoff = system('xvkbd -text "\[Control]\[Shift]\[space]" > /dev/null 2>&1')
+endfunction
+"***********************************************
+
+if filereadable(expand('~/vimconf/.neocomplcache.vimrc'))
+    source ~/vimconf/.neocomplcache.vimrc
+endif
 
 "************************
 "Unite Settings
