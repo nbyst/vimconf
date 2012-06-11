@@ -52,9 +52,6 @@ set fdm=indent
 
 syntax on
 
-"colorscheme 関係のインストール
-set background=dark
-colorscheme morning
 " Set manual completion length.                                                    [0/0]
 let g:neocomplcache_manual_completion_start_length = 9
 "_区切りの補完を有効化
@@ -72,3 +69,6 @@ nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
 "" 最近使用したファイル一覧
 nnoremap <silent> ,um :<C-u>Unite file_mru<CR>
+if filereadable(expand('~/vimconf/.local.vimrc'))
+    source ~/vimconf/.local.vimrc
+endif
