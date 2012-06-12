@@ -90,10 +90,10 @@ nnoremap <silent> ,vf :VimFiler<CR>
 command! -nargs=+ -bang -complete=file Rename let pbnr=fnamemodify(bufname('%'), ':p')|exec 'f '.escape(<q-args>, ' ')|w<bang>|call delete(pbnr)
 "********************************************************************
 "xvkbdを使ってEsc押したら自動的にIMEをOFFする設定
-inoremap <silent> <esc> <esc>:call ForceImeOff()<cr>
-function! ForceImeOff()
-		let imeoff = system('xvkbd -text "\[Control]\[Shift]\[space]" > /dev/null 2>&1')
-endfunction
+"inoremap <silent> <esc> <esc>:call ForceImeOff()<cr>
+"function! ForceImeOff()
+"		let imeoff = system('xvkbd -text "\[Control]\[Shift]\[space]" > /dev/null 2>&1')
+"endfunction
 "***********************************************
 
 if filereadable(expand('~/vimconf/.neocomplcache.vimrc'))
