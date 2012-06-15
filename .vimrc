@@ -50,7 +50,7 @@ set cursorline
 set wildmenu
 set wildmode=list:longest
 
-set fdm=syntax
+set fdm=indent
 
 syntax on
 
