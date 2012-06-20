@@ -63,6 +63,7 @@ set ambiwidth=double
 "画面最後の行をできる限り表示する。
 set display+=lastline
 
+set tags=.tags
 "----------------------------------
 " map 
 "----------------------------------
