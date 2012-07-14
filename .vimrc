@@ -44,8 +44,6 @@ set expandtab
 set tabpagemax=15
 
 
-"set cursorcolumn
-set cursorline
 
 set wildmenu
 set wildmode=list:longest
