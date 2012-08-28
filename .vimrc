@@ -42,12 +42,14 @@ set incsearch
 set title
 set tabpagemax=15
 
+nnoremap sl :set list<CR>
+nnoremap nl :set nolist<CR>
 
 
 set wildmenu
 set wildmode=list:longest
 
-set fdm=indent
+set fdm=syntax
 
 syntax on
 
