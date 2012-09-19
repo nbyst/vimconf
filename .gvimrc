@@ -1,2 +1,2 @@
 "set guioptions
-set guifont=Ricty\ 11
+set guifont=Ricty\ 10
