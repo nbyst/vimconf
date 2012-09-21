@@ -20,6 +20,9 @@ Bundle 'git://github.com/vim-scripts/JavaScript-Indent.git'
 Bundle 'git://github.com/msanders/snipmate.vim.git'
 Bundle 'git://github.com/vim-scripts/sudo.vim.git'
 Bundle 'git://github.com/vim-scripts/TwitVim.git'
+Bundle 'git://github.com/tpope/vim-fugitive.git'
+"API KEY など必"要などでとりあえずコメントアウト
+"Bundle 'git://github.com/immerzeel/vim-remember-the-milk.git' 
 filetype plugin indent on
 " ---------------------------------------------------
 
