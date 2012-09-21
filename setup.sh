@@ -1,5 +1,6 @@
 #!/bin/sh
 
+echo "starting copy vimconf/* to your system"
 #if [ -f ~/.]; then
 #  git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 #fi

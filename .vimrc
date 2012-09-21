@@ -20,6 +20,9 @@ Bundle 'git://github.com/vim-scripts/JavaScript-Indent.git'
 Bundle 'git://github.com/msanders/snipmate.vim.git'
 Bundle 'git://github.com/vim-scripts/sudo.vim.git'
 Bundle 'git://github.com/vim-scripts/TwitVim.git'
+Bundle 'git://github.com/tpope/vim-fugitive.git'
+"API KEY など必"要などでとりあえずコメントアウト
+"Bundle 'git://github.com/immerzeel/vim-remember-the-milk.git' 
 filetype plugin indent on
 " ---------------------------------------------------
 
@@ -31,6 +34,8 @@ set clipboard+=unnamed
 
 nnoremap j gj
 nnoremap k gk
+nnoremap <Esc><Esc> :noh<CR>
+
 
 set tabstop=2 sw=2 sts=2
 set showmode
@@ -77,7 +82,8 @@ nnoremap fn :echo expand("%:p")<CR>
 nnoremap ft :echo &ft<CR>
 
 "for javascript
-au FileType javascript set ts=2 sw=2 expandtab
+au FileType javascript set ts=2 sw=2 
+"expandtab
 au BufNewFile *.js set ft=javascript fenc=utf-8
 
 
@@ -102,6 +108,7 @@ endif
 
 "************************
 "Unite Settings
+let g:unite_source_bookmark_directory =	'~/.vim/bookmark'
   " バッファ一覧
 nnoremap <silent> bf :<C-u>Unite buffer<CR>
 "" ファイル一覧
@@ -112,6 +119,8 @@ nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> ,um :<C-u>Unite file_mru<CR>
 " 常用セット
 nnoremap <silent> ,uu :<C-u>Unite buffer file_mru<CR>
+ " ブックマーク一覧
+nnoremap <silent> ,ub :<C-u>Unite bookmark<CR>
  " 全部乗せ
 nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
 " ESCキーを2回押すと終了する !!!今のところきいてないよ
