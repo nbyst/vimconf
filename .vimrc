@@ -21,6 +21,7 @@ Bundle 'git://github.com/msanders/snipmate.vim.git'
 Bundle 'git://github.com/vim-scripts/sudo.vim.git'
 Bundle 'git://github.com/vim-scripts/TwitVim.git'
 Bundle 'git://github.com/tpope/vim-fugitive.git'
+Bundle 'git://github.com/thinca/vim-ref.git'
 "API KEY など必"要などでとりあえずコメントアウト
 "Bundle 'git://github.com/immerzeel/vim-remember-the-milk.git' 
 filetype plugin indent on
@@ -65,7 +66,10 @@ set ambiwidth=double
 "画面最後の行をできる限り表示する。
 set display+=lastline
 
-set tags=.tags
+set tags=./tags,~/.tags
+
+
+autocmd FileType php setl expandtab shiftwidth=4 softtabstop=4 tabstop=4
 "----------------------------------
 " map 
 "----------------------------------
@@ -83,7 +87,6 @@ nnoremap ft :echo &ft<CR>
 au FileType javascript set ts=2 sw=2 
 "expandtab
 au BufNewFile *.js set ft=javascript fenc=utf-8
-
 
 "VimFiler
 nnoremap <silent> ,vf :VimFiler<CR>
