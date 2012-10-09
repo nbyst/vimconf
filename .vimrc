@@ -17,7 +17,8 @@ set tabstop=2 sw=2 sts=2
 set showmode
 set tabpagemax=15
 
-set fdm=indent
+nnoremap sl :set list<CR>
+nnoremap nl :set nolist<CR>
 
 set showmatch
 set number
@@ -31,6 +32,10 @@ set wildmode=list:longest
 "encording関係
 set encoding=utf8
 set fileencodings=utf-8,iso-2022-jp,euc-jp,cp932
+
+set fdm=syntax
+
+syntax on
 
 
 "日本語の行の連結時には空白を入力しない。
