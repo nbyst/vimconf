@@ -86,9 +86,9 @@ au BufNewFile *.js set ft=javascript fenc=utf-8
 " pluginや特定の機能の設定
 "----------------------------------
 "neocomplcache
-if filereadable(expand('~/vimconf/neocomplcache.vimrc'))
-    source ~/vimconf/neocomplcache.vimrc
-endif
+"if filereadable(expand('~/vimconf/neocomplcache.vimrc'))
+"    source ~/vimconf/neocomplcache.vimrc
+"endif
 
 "Unite Settings
 if filereadable(expand('~/vimconf/unite.vimrc'))
@@ -97,6 +97,7 @@ endif
 
 "vim-ref config
 let g:ref_phpmanual_path = "/home/nt/doc/php-chunked-xhtml"
+let g:ref_sqlitemanual_path = "/home/nt/doc/sqlite-doc" "test-config
 
 "VimFiler
 nnoremap <silent> ,vf :VimFiler<CR>
