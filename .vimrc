@@ -5,7 +5,6 @@ endif
 
 "VI互換ではなく、vimの動きをする設定
 set nocompatible
-syntax on
 
 "無名レジスタに入るデータが*レジスタにも入るようにする
 "->他のアプリケーションでも使える
@@ -16,9 +15,6 @@ set mouse=a
 set tabstop=2 sw=2 sts=2
 set showmode
 set tabpagemax=15
-
-nnoremap sl :set list<CR>
-nnoremap nl :set nolist<CR>
 
 set showmatch
 set number
@@ -34,9 +30,6 @@ set encoding=utf8
 set fileencodings=utf-8,iso-2022-jp,euc-jp,cp932
 
 set fdm=syntax
-
-syntax on
-
 
 "日本語の行の連結時には空白を入力しない。
 set formatoptions+=mM
@@ -63,6 +56,9 @@ nnoremap k gk
 nnoremap <Esc><Esc> :noh<CR>
 nnoremap tl gt
 nnoremap th gT
+nnoremap sl :set list<CR>
+nnoremap nl :set nolist<CR>
+
 
 "Tabキーでたtabfindを表示
 nnoremap <Tab> :tabf<space>
