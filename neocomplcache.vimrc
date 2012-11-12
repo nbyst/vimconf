@@ -24,3 +24,22 @@ let g:neocomplcache_manual_completion_start_length = 9
 let g:neocomplcache_enable_underbar_completion = 1
 "補完ウィンドウの設定 :help completeopt
 set completeopt=menuone
+
+" 現在のバッファのタグファイルを生成する
+" neocomplcache からタグファイルのパスを取得して、tags に追加する
+nnoremap <expr><Space>tu g:TagsUpdate()
+function! g:TagsUpdate()
+	execute "setlocal tags=./tags,tags"
+	let bufname = expand("%:p")
+	if bufname!=""
+		call system(
+					\ "ctags ". 
+					\ "-R --tag-relative=yes --sort=yes ".
+					\ "--c++-kinds=+p --fields=+iaS --extra=+q "
+					\ .bufname." `pwd`")
+	endif
+	for filename in neocomplcache#sources#include_complete#get_include_files(bufnr('%'))
+		execute "set tags+=".neocomplcache#cache#encode_name('include_tags', filename)
+	endfor
+	return ""
+endfunction
