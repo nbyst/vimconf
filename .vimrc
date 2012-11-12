@@ -43,25 +43,25 @@ set display+=lastline
 command! -nargs=+ -bang -complete=file Rename let pbnr=fnamemodify(bufname('%'), ':p')|exec 'f '.escape(<q-args>, ' ')|w<bang>|call delete(pbnr)
 "
 "xvkbdを使ってEsc押したら自動的にIMEをOFFする設定
-"inoremap <silent> <esc> <esc>:call ForceImeOff()<cr>
-"function! ForceImeOff()
-"		let imeoff = system('xvkbd -text "\[Control]\[Shift]\[space]" > /dev/null 2>&1')
-"endfunction
+inoremap <silent> <esc> <esc>:call ForceImeOff()<cr>
+function! ForceImeOff()
+		let imeoff = system('xvkbd -text "\[Control]\[Shift]\[space]" > /dev/null 2>&1')
+endfunction
 
 "----------------------------------
 " map 
 "----------------------------------
 nnoremap j gj
 nnoremap k gk
-nnoremap <Esc><Esc> :noh<CR>
-nnoremap tl gt
-nnoremap th gT
-nnoremap sl :set list<CR>
-nnoremap nl :set nolist<CR>
 
-
-"Tabキーでたtabfindを表示
-nnoremap <Tab> :tabf<space>
+"nnoremap <Esc><Esc> :noh<CR>
+"
+"nnoremap tl gt
+"nnoremap th gT
+"
+"nnoremap sl :set list<CR>
+"nnoremap nl :set nolist<CR>
+" nnoremap <Tab> :tabf<space>
 
 "ファイル名を表示(full path)
 nnoremap fn :echo expand("%:p")<CR>
