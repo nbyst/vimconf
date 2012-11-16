@@ -23,6 +23,7 @@ Bundle 'git://github.com/vim-scripts/TwitVim.git'
 Bundle 'git://github.com/tpope/vim-fugitive.git'
 Bundle 'git://github.com/thinca/vim-ref.git'
 Bundle 'git://github.com/vim-scripts/taglist.vim.git'
+Bundle 'git://github.com/fuenor/qfixhowm.git'
 "API KEY など必"要などでとりあえずコメントアウト
 "Bundle 'git://github.com/immerzeel/vim-remember-the-milk.git' 
 filetype plugin indent on
