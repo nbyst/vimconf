@@ -5,6 +5,7 @@ endif
 
 "VI互換ではなく、vimの動きをする設定
 set nocompatible
+syntax on
 
 "無名レジスタに入るデータが*レジスタにも入るようにする
 "->他のアプリケーションでも使える
@@ -29,7 +30,7 @@ set wildmode=list:longest
 set encoding=utf8
 set fileencodings=utf-8,iso-2022-jp,euc-jp,cp932
 
-set fdm=syntax
+set fdm=indent
 
 "日本語の行の連結時には空白を入力しない。
 set formatoptions+=mM
@@ -82,9 +83,9 @@ au BufNewFile *.js set ft=javascript fenc=utf-8
 " pluginや特定の機能の設定
 "----------------------------------
 "neocomplcache
-"if filereadable(expand('~/vimconf/neocomplcache.vimrc'))
-"    source ~/vimconf/neocomplcache.vimrc
-"endif
+if filereadable(expand('~/vimconf/neocomplcache.vimrc'))
+    source ~/vimconf/neocomplcache.vimrc
+endif
 
 "Unite Settings
 if filereadable(expand('~/vimconf/unite.vimrc'))
