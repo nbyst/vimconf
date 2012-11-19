@@ -5,6 +5,7 @@ endif
 
 "VI互換ではなく、vimの動きをする設定
 set nocompatible
+syntax on
 
 "無名レジスタに入るデータが*レジスタにも入るようにする
 "->他のアプリケーションでも使える
@@ -29,8 +30,7 @@ set wildmode=list:longest
 set encoding=utf8
 set fileencodings=utf-8,iso-2022-jp,euc-jp,cp932
 
-set fdm=syntax
-syntax on
+set fdm=indent
 
 "日本語の行の連結時には空白を入力しない。
 set formatoptions+=mM
@@ -44,25 +44,25 @@ set display+=lastline
 command! -nargs=+ -bang -complete=file Rename let pbnr=fnamemodify(bufname('%'), ':p')|exec 'f '.escape(<q-args>, ' ')|w<bang>|call delete(pbnr)
 "
 "xvkbdを使ってEsc押したら自動的にIMEをOFFする設定
-"inoremap <silent> <esc> <esc>:call ForceImeOff()<cr>
-"function! ForceImeOff()
-"		let imeoff = system('xvkbd -text "\[Control]\[Shift]\[space]" > /dev/null 2>&1')
-"endfunction
+inoremap <silent> <esc> <esc>:call ForceImeOff()<cr>
+function! ForceImeOff()
+		let imeoff = system('xvkbd -text "\[Control]\[Shift]\[space]" > /dev/null 2>&1')
+endfunction
 
 "----------------------------------
 " map 
 "----------------------------------
 nnoremap j gj
 nnoremap k gk
-nnoremap <Esc><Esc> :noh<CR>
-nnoremap tl gt
-nnoremap th gT
-nnoremap sl :set list<CR>
-nnoremap nl :set nolist<CR>
 
-
-"Tabキーでたtabfindを表示
-nnoremap <Tab> :tabf<space>
+"nnoremap <Esc><Esc> :noh<CR>
+"
+"nnoremap tl gt
+"nnoremap th gT
+"
+"nnoremap sl :set list<CR>
+"nnoremap nl :set nolist<CR>
+" nnoremap <Tab> :tabf<space>
 
 "ファイル名を表示(full path)
 nnoremap fn :echo expand("%:p")<CR>
@@ -83,9 +83,9 @@ au BufNewFile *.js set ft=javascript fenc=utf-8
 " pluginや特定の機能の設定
 "----------------------------------
 "neocomplcache
-"if filereadable(expand('~/vimconf/neocomplcache.vimrc'))
-"    source ~/vimconf/neocomplcache.vimrc
-"endif
+if filereadable(expand('~/vimconf/neocomplcache.vimrc'))
+    source ~/vimconf/neocomplcache.vimrc
+endif
 
 "Unite Settings
 if filereadable(expand('~/vimconf/unite.vimrc'))

@@ -38,5 +38,4 @@
 ":tag [タグ名]		指定したタグにジャンプ。(:taと同じ)
 ":ptag [タグ名]	[タグ名]の定義をプレビューウィンドウで開く。
 
-set tags=./tags,./.tags,~/.tags
-
+set tags=tags,.tags,~/.tags
