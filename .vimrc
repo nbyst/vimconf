@@ -3,10 +3,6 @@ if filereadable(expand('~/vimconf/bundle.vimrc'))
     source ~/vimconf/bundle.vimrc
 endif
 
-"VI互換ではなく、vimの動きをする設定
-set nocompatible
-syntax on
-
 "無名レジスタに入るデータが*レジスタにも入るようにする
 "->他のアプリケーションでも使える
 set clipboard+=unnamed
