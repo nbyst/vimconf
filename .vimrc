@@ -78,3 +78,5 @@ endif
 if filereadable(expand('~/vimconf/.local.vimrc'))
     source ~/vimconf/.local.vimrc
 endif
+
+syntax on
