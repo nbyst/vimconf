@@ -85,4 +85,7 @@ if filereadable(expand('~/vimconf/.local.vimrc'))
     source ~/vimconf/.local.vimrc
 endif
 
+"quickrunで横分割
+let g:quickrun_config={'*': {'split': ''}}
+
 syntax on
