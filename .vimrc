@@ -54,12 +54,8 @@ nnoremap k gk
 " file, 言語ごとの設定
 "----------------------------------
 "for php
-<<<<<<< HEAD
 autocmd FileType php setl shiftwidth=4 softtabstop=4 tabstop=4
 
-=======
-autocmd FileType php setl expandtab shiftwidth=4 softtabstop=4 tabstop=4
->>>>>>> 96e67d47d7117feb0ff0a6d89d294e17040fdd2d
 "for javascript
 au FileType javascript set ts=2 sw=2 
 au BufNewFile *.js set ft=javascript fenc=utf-8
