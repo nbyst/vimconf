@@ -50,6 +50,11 @@ function! ForceImeOff()
 endfunction
 
 "----------------------------------
+" ab 
+"----------------------------------
+ab lj <!--{*
+ab rj  *}-->
+"----------------------------------
 " map 
 "----------------------------------
 nnoremap j gj
@@ -73,7 +78,7 @@ nnoremap ft :echo &ft<CR>
 " file, 言語ごとの設定
 "----------------------------------
 "for php
-autocmd FileType php setl expandtab shiftwidth=4 softtabstop=4 tabstop=4
+autocmd FileType php setl shiftwidth=4 softtabstop=4 tabstop=4
 
 "for javascript
 au FileType javascript set ts=2 sw=2 
