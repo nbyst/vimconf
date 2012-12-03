@@ -1,18 +1,18 @@
 " Vundle Setting
-set nocompatible
 filetype off
 
  set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-" original repos on github
-Bundle 'git://github.com/gmarik/vundle.git'
+"Bundle 'git://github.com/gmarik/vundle.git'
+"Bundle 'git://github.com/Shougo/vimfiler.git'
+"Bundle 'git://github.com/Shougo/vimshell.git'
+"API KEY など必"要などでとりあえずコメントアウト
+"Bundle 'git://github.com/immerzeel/vim-remember-the-milk.git' 
 Bundle 'ujihisa/quickrun'
 Bundle 'git://github.com/Shougo/vimproc.git'
 Bundle 'git://github.com/Shougo/neocomplcache.git'
 Bundle 'git://github.com/Shougo/unite.vim.git'
-Bundle 'git://github.com/Shougo/vimfiler.git'
-Bundle 'git://github.com/Shougo/vimshell.git'
 Bundle 'git://github.com/mattn/webapi-vim.git'
 Bundle 'git://github.com/mattn/zencoding-vim.git'
 Bundle 'git://github.com/vim-scripts/IndentAnything.git'
@@ -25,5 +25,3 @@ Bundle 'git://github.com/thinca/vim-ref.git'
 Bundle 'git://github.com/vim-scripts/taglist.vim.git'
 Bundle 'git://github.com/fuenor/qfixhowm.git'
 Bundle 'git://github.com/mattn/benchvimrc-vim.git'
-"API KEY など必"要などでとりあえずコメントアウト
-"Bundle 'git://github.com/immerzeel/vim-remember-the-milk.git' 
