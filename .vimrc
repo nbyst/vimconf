@@ -47,7 +47,7 @@ nnoremap k gk
 "nnoremap nl :set nolist<CR>
 " nnoremap <Tab> :tabf<space>
 "ファイル名を表示(full path)
-"nnoremap fn :echo expand("%:p")<CR>
+nnoremap fn :echo expand("%:p")<CR>
 "ファイルタイプを表示
 "nnoremap ft :echo &ft<CR>
 "----------------------------------
