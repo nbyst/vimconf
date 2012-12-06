@@ -5,6 +5,7 @@ endif
 "無名レジスタに入るデータが*レジスタにも入るようにする->他のアプリケーションでも使える
 set clipboard+=unnamed
 set mouse=a
+set cindent
 set tabstop=2 sw=2 sts=2
 "set tabpagemax=15
 set showmatch
@@ -54,11 +55,12 @@ nnoremap fn :echo expand("%:p")<CR>
 " file, 言語ごとの設定
 "----------------------------------
 "for php
-autocmd FileType php setl shiftwidth=4 softtabstop=4 tabstop=4
+autocmd FileType php setl expandtab shiftwidth=4 softtabstop=4 tabstop=4
 
 "for javascript
 au FileType javascript set ts=2 sw=2 
 au BufNewFile *.js set ft=javascript fenc=utf-8
+
 "----------------------------------
 " pluginや特定の機能の設定
 "----------------------------------
@@ -84,7 +86,6 @@ endif
 if filereadable(expand('~/vimconf/.local.vimrc'))
     source ~/vimconf/.local.vimrc
 endif
-
 "quickrunで横分割
 let g:quickrun_config={'*': {'split': ''}}
 

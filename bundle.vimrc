@@ -1,14 +1,16 @@
 " Vundle Setting
 filetype off
 
- set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-"Bundle 'git://github.com/gmarik/vundle.git'
 "Bundle 'git://github.com/Shougo/vimfiler.git'
 "Bundle 'git://github.com/Shougo/vimshell.git'
-"API KEY など必"要などでとりあえずコメントアウト
+"Bundle 'git://github.com/fuenor/qfixhowm.git'
 "Bundle 'git://github.com/immerzeel/vim-remember-the-milk.git' 
+"Bundle 'git://github.com/mattn/benchvimrc-vim.git' //これは必要に応じて
+"ゆくゆくはvundleをhand-install化け
+Bundle 'git://github.com/gmarik/vundle.git' 
 Bundle 'ujihisa/quickrun'
 Bundle 'git://github.com/Shougo/vimproc.git'
 Bundle 'git://github.com/Shougo/neocomplcache.git'
@@ -23,5 +25,4 @@ Bundle 'git://github.com/vim-scripts/TwitVim.git'
 Bundle 'git://github.com/tpope/vim-fugitive.git'
 Bundle 'git://github.com/thinca/vim-ref.git'
 Bundle 'git://github.com/vim-scripts/taglist.vim.git'
-Bundle 'git://github.com/fuenor/qfixhowm.git'
-Bundle 'git://github.com/mattn/benchvimrc-vim.git'
+Bundle 'git://github.com/hallettj/jslint.vim.git'
