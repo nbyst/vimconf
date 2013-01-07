@@ -79,10 +79,6 @@ let g:ref_phpmanual_path = "/home/nt/doc/php-chunked-xhtml"
 let g:ref_sqlitemanual_path = "/home/nt/doc/sqlite-doc" "test-config
 "VimFiler
 "nnoremap <silent> ,vf :VimFiler<CR>
-"tags
-if filereadable(expand('~/vimconf/tags.vimrc'))
-    source ~/vimconf/tags.vimrc
-endif
 "**************************
 "localのvimrc
 if filereadable(expand('~/vimconf/.local.vimrc'))
@@ -91,4 +87,5 @@ endif
 "quickrunで横分割
 let g:quickrun_config={'*': {'split': ''}}
 
+set tags=tags,.tags,~/.tags
 syntax on
