@@ -39,7 +39,8 @@ ab rj  *}-->
 " map 
 "----------------------------------
 " F1を無効化
-noremap <F1> <Nop>
+nnoremap <F1> <Nop>
+inoremap <F1> <Nop>
 nnoremap j gj
 nnoremap k gk
 "
