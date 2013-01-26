@@ -107,8 +107,15 @@ if filereadable(expand('~/vimconf/unite.vimrc'))
     source ~/vimconf/unite.vimrc
 endif
 "vim-ref config
+<<<<<<< HEAD
 let g:ref_phpmanual_path = $HOME.'/doc/php-chunked-xhtml'
 let g:ref_sqlitemanual_path = $HOME.'/doc/sqlite-doc'
+=======
+let g:ref_phpmanual_path = "/home/nt/doc/php-chunked-xhtml"
+let g:ref_sqlitemanual_path = "/home/nt/doc/sqlite-doc" "test-config
+"VimFiler
+"nnoremap <silent> ,vf :VimFiler<CR>
+>>>>>>> 22a97ae830b406960eb0dbb4075f2d291e862590
 "**************************
 "localのvimrc
 if filereadable(expand('~/vimconf/.local.vimrc'))
@@ -118,3 +125,7 @@ endif
 let g:quickrun_config={'*': {'split': ''}}
 
 set tags=tags,.tags,~/.tags
+<<<<<<< HEAD
+=======
+syntax on
+>>>>>>> 22a97ae830b406960eb0dbb4075f2d291e862590
