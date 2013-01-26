@@ -1,9 +1,3 @@
-""Vundle Settings
-"if filereadable(expand('~/vimconf/bundle.vimrc'))
-"    source ~/vimconf/bundle.vimrc
-"endif
-" Vundle Setting
-
 filetype off
 if has('vim_starting')
 	set runtimepath+=$HOME/.vim/neobundle.vim
@@ -52,6 +46,8 @@ set fdm=indent
 set formatoptions+=mM
 "□や○の文字があってもカーソル位置がずれないようにする。
 set ambiwidth=double
+set tags=tags,.tags,~/.tags
+
 "「Rename newfilename」で変更したいファイル名を指定して実行します。
 "!を付けると強制保存して変更
 command! -nargs=+ -bang -complete=file Rename let pbnr=fnamemodify(bufname('%'), ':p')|exec 'f '.escape(<q-args>, ' ')|w<bang>|call delete(pbnr)
@@ -106,26 +102,13 @@ endif
 if filereadable(expand('~/vimconf/unite.vimrc'))
     source ~/vimconf/unite.vimrc
 endif
-"vim-ref config
-<<<<<<< HEAD
 let g:ref_phpmanual_path = $HOME.'/doc/php-chunked-xhtml'
 let g:ref_sqlitemanual_path = $HOME.'/doc/sqlite-doc'
-=======
-let g:ref_phpmanual_path = "/home/nt/doc/php-chunked-xhtml"
-let g:ref_sqlitemanual_path = "/home/nt/doc/sqlite-doc" "test-config
-"VimFiler
-"nnoremap <silent> ,vf :VimFiler<CR>
->>>>>>> 22a97ae830b406960eb0dbb4075f2d291e862590
+
+"quickrunで横分割
+let g:quickrun_config={'*': {'split': ''}}
 "**************************
 "localのvimrc
 if filereadable(expand('~/vimconf/.local.vimrc'))
     source ~/vimconf/.local.vimrc
 endif
-"quickrunで横分割
-let g:quickrun_config={'*': {'split': ''}}
-
-set tags=tags,.tags,~/.tags
-<<<<<<< HEAD
-=======
-syntax on
->>>>>>> 22a97ae830b406960eb0dbb4075f2d291e862590
