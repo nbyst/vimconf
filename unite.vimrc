@@ -1,4 +1,4 @@
-  " バッファ一覧
+" バッファ一覧
 nnoremap <silent> bf :<C-u>Unite buffer<CR>
 "" ファイル一覧
 nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
