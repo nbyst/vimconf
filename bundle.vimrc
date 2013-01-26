@@ -8,7 +8,7 @@ call vundle#rc()
 "Bundle 'git://github.com/Shougo/vimshell.git'
 "Bundle 'git://github.com/fuenor/qfixhowm.git'
 "Bundle 'git://github.com/immerzeel/vim-remember-the-milk.git' 
-"Bundle 'git://github.com/mattn/benchvimrc-vim.git' //これは必要に応じて
+Bundle 'git://github.com/mattn/benchvimrc-vim.git' 
 "ゆくゆくはvundleをhand-install化け
 Bundle 'git://github.com/gmarik/vundle.git' 
 Bundle 'ujihisa/quickrun'
