@@ -1,18 +1,24 @@
 filetype off
+"neobundle自体のpath
 if has('vim_starting')
 	set runtimepath+=$HOME/.vim/neobundle.vim
 endif
-call neobundle#rc(expand('~/.vim/neobundle.vim'))
-NeoBundle	'Shougo/neocomplcache'
+"neobundleが管理するプラグインを入れるdirのpath
+call neobundle#rc(expand('~/.vim/bundle'))
 "NeoBundle 'git://github.com/Shougo/vimfiler.git'
 "NeoBundle 'git://github.com/Shougo/vimshell.git'
 "NeoBundle 'git://github.com/fuenor/qfixhowm.git'
 "NeoBundle 'git://github.com/immerzeel/vim-remember-the-milk.git' 
-NeoBundle 'git://github.com/mattn/benchvimrc-vim.git' 
-NeoBundle 'git://github.com/gmarik/vundle.git' 
+"NeoBundle 'git://github.com/mattn/benchvimrc-vim.git' 
 NeoBundle 'ujihisa/quickrun'
-NeoBundle 'git://github.com/Shougo/vimproc.git'
-NeoBundle 'git://github.com/Shougo/neocomplcache.git'
+NeoBundle	'Shougo/neocomplcache'
+NeoBundle 'Shougo/vimproc', {	'build' : {
+			\		'unix': 'make -f make_unix.mak',
+			\		'cygwin': 'make -f make_cygwin.mak',
+			\		'mac': 'make -f make_mac.mak',
+			\	},
+			\}
+NeoBundle 'git://github.com/gmarik/vundle.git' 
 NeoBundle 'git://github.com/Shougo/unite.vim.git'
 NeoBundle 'git://github.com/mattn/webapi-vim.git'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
