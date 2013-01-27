@@ -1,7 +1,38 @@
-"Vundle Settings
-if filereadable(expand('~/vimconf/bundle.vimrc'))
-    source ~/vimconf/bundle.vimrc
+filetype off
+"neobundle自体のpath
+if has('vim_starting')
+	set runtimepath+=$HOME/.vim/neobundle.vim
 endif
+"neobundleが管理するプラグインを入れるdirのpath
+call neobundle#rc(expand('~/.vim/bundle'))
+"NeoBundle 'git://github.com/Shougo/vimfiler.git'
+"NeoBundle 'git://github.com/Shougo/vimshell.git'
+"NeoBundle 'git://github.com/fuenor/qfixhowm.git'
+"NeoBundle 'git://github.com/immerzeel/vim-remember-the-milk.git' 
+"NeoBundle 'git://github.com/mattn/benchvimrc-vim.git' 
+NeoBundle 'ujihisa/quickrun'
+NeoBundle	'Shougo/neocomplcache'
+NeoBundle 'Shougo/vimproc', {	'build' : {
+			\		'unix': 'make -f make_unix.mak',
+			\		'cygwin': 'make -f make_cygwin.mak',
+			\		'mac': 'make -f make_mac.mak',
+			\	},
+			\}
+NeoBundle 'git://github.com/gmarik/vundle.git' 
+NeoBundle 'git://github.com/Shougo/unite.vim.git'
+NeoBundle 'git://github.com/mattn/webapi-vim.git'
+NeoBundle 'git://github.com/mattn/zencoding-vim.git'
+NeoBundle 'git://github.com/vim-scripts/IndentAnything.git'
+NeoBundle 'git://github.com/vim-scripts/JavaScript-Indent.git'
+NeoBundle 'git://github.com/msanders/snipmate.vim.git'
+NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
+NeoBundle 'git://github.com/vim-scripts/TwitVim.git'
+NeoBundle 'git://github.com/tpope/vim-fugitive.git'
+NeoBundle 'git://github.com/thinca/vim-ref.git'
+NeoBundle 'git://github.com/vim-scripts/taglist.vim.git'
+NeoBundle 'git://github.com/hallettj/jslint.vim.git'
+filetype plugin indent on
+
 "無名レジスタに入るデータが*レジスタにも入るようにする->他のアプリケーションでも使える
 set clipboard+=unnamed
 set mouse=a
@@ -21,10 +52,13 @@ set fdm=indent
 set formatoptions+=mM
 "□や○の文字があってもカーソル位置がずれないようにする。
 set ambiwidth=double
+set tags=tags,.tags,~/.tags
+syntax on
+
 "「Rename newfilename」で変更したいファイル名を指定して実行します。
 "!を付けると強制保存して変更
 command! -nargs=+ -bang -complete=file Rename let pbnr=fnamemodify(bufname('%'), ':p')|exec 'f '.escape(<q-args>, ' ')|w<bang>|call delete(pbnr)
-"
+
 "xvkbdを使ってEsc押したら自動的にIMEをOFFする設定
 "inoremap <silent> <esc> <esc>:call ForceImeOff()<cr>
 "function! ForceImeOff()
@@ -75,18 +109,13 @@ endif
 if filereadable(expand('~/vimconf/unite.vimrc'))
     source ~/vimconf/unite.vimrc
 endif
-"vim-ref config
-let g:ref_phpmanual_path = "/home/nt/doc/php-chunked-xhtml"
-let g:ref_sqlitemanual_path = "/home/nt/doc/sqlite-doc" "test-config
-"VimFiler
-"nnoremap <silent> ,vf :VimFiler<CR>
+let g:ref_phpmanual_path = $HOME.'/doc/php-chunked-xhtml'
+let g:ref_sqlitemanual_path = $HOME.'/doc/sqlite-doc'
+
+"quickrunで横分割
+let g:quickrun_config={'*': {'split': ''}}
 "**************************
 "localのvimrc
 if filereadable(expand('~/vimconf/.local.vimrc'))
     source ~/vimconf/.local.vimrc
 endif
-"quickrunで横分割
-let g:quickrun_config={'*': {'split': ''}}
-
-set tags=tags,.tags,~/.tags
-syntax on
