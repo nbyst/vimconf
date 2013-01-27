@@ -47,6 +47,7 @@ set formatoptions+=mM
 "□や○の文字があってもカーソル位置がずれないようにする。
 set ambiwidth=double
 set tags=tags,.tags,~/.tags
+syntax on
 
 "「Rename newfilename」で変更したいファイル名を指定して実行します。
 "!を付けると強制保存して変更
