@@ -2,7 +2,7 @@ filetype off
 if has('vim_starting')
 	set runtimepath+=$HOME/.vim/neobundle.vim
 endif
-call neobundle#rc(expand('~/.vim/bundle'))
+call neobundle#rc(expand('~/.vim/neobundle.vim'))
 NeoBundle	'Shougo/neocomplcache'
 "NeoBundle 'git://github.com/Shougo/vimfiler.git'
 "NeoBundle 'git://github.com/Shougo/vimshell.git'
