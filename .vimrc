@@ -33,6 +33,7 @@ NeoBundle 'git://github.com/vim-scripts/taglist.vim.git'
 NeoBundle 'git://github.com/hallettj/jslint.vim.git'
 filetype plugin indent on
 
+colorscheme desert
 "無名レジスタに入るデータが*レジスタにも入るようにする->他のアプリケーションでも使える
 set clipboard+=unnamed
 set mouse=a
