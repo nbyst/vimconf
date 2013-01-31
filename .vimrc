@@ -72,6 +72,7 @@ ab rj  *}-->
 "----------------------------------
 " map 
 "----------------------------------
+nnoremap <leader>d <ESC>i<C-R>=strftime("%Y/%m/%d (%a) %H:%M")<CR><CR>
 " F1を無効化
 nnoremap <F1> <Nop>
 inoremap <F1> <Nop>
