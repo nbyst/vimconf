@@ -42,7 +42,6 @@ set cindent
 set tabstop=2 sw=2 sts=2
 "set tabpagemax=15
 set showmatch
-set number
 set incsearch
 "status line関連
 set wildmenu
