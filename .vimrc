@@ -30,7 +30,8 @@ NeoBundle 'git://github.com/vim-scripts/TwitVim.git'
 NeoBundle 'git://github.com/tpope/vim-fugitive.git'
 NeoBundle 'git://github.com/thinca/vim-ref.git'
 NeoBundle 'git://github.com/vim-scripts/taglist.vim.git'
-NeoBundle 'git://github.com/hallettj/jslint.vim.git'
+"NeoBundle 'basyura/jslint.vim'
+"NeoBundle 'git://github.com/hallettj/jslint.vim.git'
 filetype plugin indent on
 
 colorscheme desert
@@ -99,6 +100,23 @@ autocmd FileType php setl expandtab shiftwidth=4 softtabstop=4 tabstop=4
 "for javascript
 au FileType javascript set ts=2 sw=2 
 au BufNewFile *.js set ft=javascript fenc=utf-8
+"jslint.vimfunction! s:  autocmd BufLeave
+"&lt;buffer&gt; call jslint#clear()  autocmd BufWritePost &lt;buffer&gt; call
+"jslint#check()  autocmd CursorMoved  &lt;buffer&gt; call
+"jslint#message()endfunctionautocmd FileType javascript call
+"s:javascript_filetype_settings()
+
+" basyura さんの示した設定
+"augroup MyGroup
+"	autocmd! MyGroup
+"	autocmd FileType javascript call s:javascript_filetype_settings()
+"augroup END
+"
+"function! s:javascript_filetype_settings()
+"	autocmd BufLeave     <buffer> call jslint#clear()
+"	autocmd BufWritePost <buffer> call jslint#check()
+"	autocmd CursorMoved  <buffer> call jslint#message()
+"endfunction
 
 "----------------------------------
 " pluginや特定の機能の設定
