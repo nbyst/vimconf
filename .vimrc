@@ -97,7 +97,6 @@ nnoremap fn :echo expand("%:p")<CR>
 "----------------------------------
 "for php
 autocmd FileType php setl expandtab shiftwidth=4 softtabstop=4 tabstop=4
-
 "for javascript
 au FileType javascript set ts=2 sw=2 
 au BufNewFile *.js set ft=javascript fenc=utf-8
