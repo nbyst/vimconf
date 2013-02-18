@@ -133,6 +133,13 @@ endif
 let g:ref_phpmanual_path = $HOME.'/doc/php-chunked-xhtml'
 let g:ref_sqlitemanual_path = $HOME.'/doc/sqlite-doc'
 
+"gtags
+":Gtags 
+":Gtags -f %<CR>
+":GtagsCursor<CR>
+nnoremap gn :cn<CR>
+nnoremap gp :cp<CR>
+
 "quickrunで横分割
 let g:quickrun_config={'*': {'split': ''}}
 "**************************
