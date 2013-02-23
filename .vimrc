@@ -140,8 +140,8 @@ let g:ref_sqlitemanual_path = $HOME.'/doc/sqlite-doc'
 ":Gtags 
 ":Gtags -f %<CR>
 ":GtagsCursor<CR>
-nnoremap gn :cn<CR>
-nnoremap gp :cp<CR>
+"nnoremap gn :cn<CR>
+"nnoremap gp :cp<CR>
 
 "quickrunで横分割
 let g:quickrun_config={'*': {'split': ''}}
