@@ -9,33 +9,37 @@ call neobundle#rc(expand('~/.vim/bundle'))
 "NeoBundle 'git://github.com/Shougo/vimshell.git'
 "NeoBundle 'git://github.com/fuenor/qfixhowm.git'
 "NeoBundle 'git://github.com/immerzeel/vim-remember-the-milk.git' 
-"NeoBundle 'git://github.com/mattn/benchvimrc-vim.git' 
 "NeoBundle 'basyura/jslint.vim'
 "NeoBundle 'git://github.com/hallettj/jslint.vim.git'
+NeoBundle 'git://github.com/mattn/benchvimrc-vim.git' 
+NeoBundle 'ujihisa/quickrun'
+NeoBundle	'Shougo/neocomplcache'
 NeoBundle 'Shougo/vimproc', {	'build' : {
 			\		'unix': 'make -f make_unix.mak',
 			\		'cygwin': 'make -f make_cygwin.mak',
 			\		'mac': 'make -f make_mac.mak',
 			\	},
 			\}
-NeoBundle	'Shougo/neocomplcache'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'gmarik/vundle' 
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'mattn/zencoding-vim'
-NeoBundle 'msanders/snipmate.vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'thinca/vim-ref'
-NeoBundle 'ujihisa/quickrun'
-NeoBundle 'vim-scripts/sudo.vim'
-NeoBundle 'vim-scripts/TwitVim'
-NeoBundle 'vim-scripts/IndentAnything'
-NeoBundle 'vim-scripts/JavaScript-Indent'
-NeoBundle 'vim-scripts/taglist.vim'
-NeoBundle 'vim-scripts/gtags.vim'
+NeoBundle 'git://github.com/gmarik/vundle.git' 
+NeoBundle 'git://github.com/Shougo/unite.vim.git'
+NeoBundle 'git://github.com/mattn/webapi-vim.git'
+NeoBundle 'git://github.com/mattn/zencoding-vim.git'
+NeoBundle 'git://github.com/vim-scripts/IndentAnything.git'
+NeoBundle 'git://github.com/vim-scripts/JavaScript-Indent.git'
+NeoBundle 'git://github.com/msanders/snipmate.vim.git'
+NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
+NeoBundle 'git://github.com/vim-scripts/TwitVim.git'
+NeoBundle 'git://github.com/tpope/vim-fugitive.git'
+NeoBundle 'git://github.com/thinca/vim-ref.git'
+NeoBundle 'git://github.com/vim-scripts/taglist.vim.git'
+"color scheme
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'vim-scripts/rdark'
+
 filetype plugin indent on
 
-colorscheme desert
 "無名レジスタに入るデータが*レジスタにも入るようにする->他のアプリケーションでも使える
 set clipboard+=unnamed
 set mouse=a
