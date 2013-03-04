@@ -39,7 +39,6 @@ NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'vim-scripts/rdark'
 
 filetype plugin indent on
-colorscheme rdark
 
 "無名レジスタに入るデータが*レジスタにも入るようにする->他のアプリケーションでも使える
 set clipboard+=unnamed
