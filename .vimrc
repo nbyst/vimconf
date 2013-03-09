@@ -64,6 +64,8 @@ set formatoptions+=mM
 set ambiwidth=double
 set tags=tags,.tags,~/.tags
 syntax on
+set nu
+set expandtab
 
 "「Rename newfilename」で変更したいファイル名を指定して実行します。
 "!を付けると強制保存して変更
@@ -143,11 +145,11 @@ let g:ref_phpmanual_path = $HOME.'/doc/php-chunked-xhtml'
 let g:ref_sqlitemanual_path = $HOME.'/doc/sqlite-doc'
 
 "gtags
-":Gtags 
-":Gtags -f %<CR>
-":GtagsCursor<CR>
-"nnoremap gn :cn<CR>
-"nnoremap gp :cp<CR>
+nnoremap \g :Gtags <CR>
+nnoremap gF :Gtags -f %<CR>
+nnoremap gc :GtagsCursor<CR>
+nnoremap gn :cn<CR>
+nnoremap gp :cp<CR>
 
 "quickrunで横分割
 let g:quickrun_config={'*': {'split': ''}}
