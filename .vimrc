@@ -20,18 +20,22 @@ NeoBundle 'Shougo/vimproc', {	'build' : {
 			\		'mac': 'make -f make_mac.mak',
 			\	},
 			\}
-NeoBundle 'git://github.com/gmarik/vundle.git' 
-NeoBundle 'git://github.com/Shougo/unite.vim.git'
-NeoBundle 'git://github.com/mattn/webapi-vim.git'
-NeoBundle 'git://github.com/mattn/zencoding-vim.git'
-NeoBundle 'git://github.com/vim-scripts/IndentAnything.git'
-NeoBundle 'git://github.com/vim-scripts/JavaScript-Indent.git'
-NeoBundle 'git://github.com/msanders/snipmate.vim.git'
-NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
-NeoBundle 'git://github.com/vim-scripts/TwitVim.git'
-NeoBundle 'git://github.com/tpope/vim-fugitive.git'
-NeoBundle 'git://github.com/thinca/vim-ref.git'
-NeoBundle 'git://github.com/vim-scripts/taglist.vim.git'
+NeoBundle	'Shougo/neocomplcache'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'gmarik/vundle' 
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'msanders/snipmate.vim'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'ujihisa/quickrun'
+NeoBundle 'vim-scripts/sudo.vim'
+NeoBundle 'vim-scripts/TwitVim'
+NeoBundle 'vim-scripts/IndentAnything'
+NeoBundle 'vim-scripts/JavaScript-Indent'
+NeoBundle 'vim-scripts/taglist.vim'
+NeoBundle 'vim-scripts/gtags.vim'
+NeoBundle 'kana/vim-tabpagecd'
 "color scheme
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'w0ng/vim-hybrid'
@@ -73,13 +77,15 @@ command! -nargs=+ -bang -complete=file Rename let pbnr=fnamemodify(bufname('%'),
 "----------------------------------
 " ab 
 "----------------------------------
-ab lj <!--{*
-ab rj  *}-->
+ab lj <!--{
+ab rj  }-->
 "----------------------------------
 " map 
 "----------------------------------
 nnoremap <leader>d <ESC>i<C-R>=strftime("%Y/%m/%d (%a) %H:%M")<CR><CR>
 nnoremap dl <ESC>:!deploy<CR>
+nnoremap dr <ESC>:!deploy r<CR>
+nnoremap df <ESC>:!file %<CR>
 " F1を無効化
 nnoremap <F1> <Nop>
 inoremap <F1> <Nop>
