@@ -43,6 +43,7 @@ NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'vim-scripts/rdark'
 
 filetype plugin indent on
+colorscheme desert
 
 "無名レジスタに入るデータが*レジスタにも入るようにする->他のアプリケーションでも使える
 set clipboard+=unnamed
@@ -153,6 +154,8 @@ nnoremap gp :cp<CR>
 
 "quickrunで横分割
 let g:quickrun_config={'*': {'split': ''}}
+"
+let g:snippets_dir = '~/vimconf/snippets/'
 "**************************
 "localのvimrc
 if filereadable(expand('~/vimconf/.local.vimrc'))
