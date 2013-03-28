@@ -37,10 +37,8 @@ NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'kana/vim-tabpagecd'
 "color scheme
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'vim-scripts/rdark'
 
 filetype plugin indent on
 colorscheme desert
