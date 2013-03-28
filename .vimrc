@@ -94,6 +94,15 @@ nnoremap <F1> <Nop>
 inoremap <F1> <Nop>
 nnoremap j gj
 nnoremap k gk
+
+nnoremap gi :Git 
+
+"gtags
+nnoremap \g :Gtags <CR>
+nnoremap gF :Gtags -f %<CR>
+nnoremap gc :GtagsCursor<CR>
+nnoremap gn :cn<CR>
+nnoremap gp :cp<CR>
 "
 "nnoremap tl gt
 "nnoremap th gT
@@ -145,17 +154,12 @@ endif
 let g:ref_phpmanual_path = $HOME.'/doc/php-chunked-xhtml'
 let g:ref_sqlitemanual_path = $HOME.'/doc/sqlite-doc'
 
-"gtags
-nnoremap \g :Gtags <CR>
-nnoremap gF :Gtags -f %<CR>
-nnoremap gc :GtagsCursor<CR>
-nnoremap gn :cn<CR>
-nnoremap gp :cp<CR>
-
 "quickrunで横分割
 let g:quickrun_config={'*': {'split': ''}}
 "
 let g:snippets_dir = '~/vimconf/snippets/'
+
+
 "**************************
 "localのvimrc
 if filereadable(expand('~/vimconf/.local.vimrc'))
