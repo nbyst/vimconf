@@ -47,6 +47,7 @@ colorscheme desert
 set clipboard+=unnamed
 set mouse=a
 set cindent
+set autoindent 
 set tabstop=2 sw=2 sts=2
 "set tabpagemax=15
 set showmatch
@@ -64,7 +65,6 @@ set ambiwidth=double
 set tags=tags,.tags,~/.tags
 syntax on
 set nu
-set expandtab
 
 "「Rename newfilename」で変更したいファイル名を指定して実行します。
 "!を付けると強制保存して変更
@@ -115,8 +115,10 @@ nnoremap fn :echo expand("%:p")<CR>
 "----------------------------------
 " file, 言語ごとの設定
 "----------------------------------
-"for php
 autocmd FileType php setl expandtab shiftwidth=4 softtabstop=4 tabstop=4
+autocmd FileType python setlocal ts=4 sw=4 sta et sts ai
+autocmd FileType html setlocal et ai
+autocmd FileType smarty setlocal et ai
 "for javascript
 au FileType javascript set ts=2 sw=2 
 au BufNewFile *.js set ft=javascript fenc=utf-8
@@ -163,3 +165,5 @@ let g:snippets_dir = '~/vimconf/snippets/'
 if filereadable(expand('~/vimconf/.local.vimrc'))
     source ~/vimconf/.local.vimrc
 endif
+set list
+	
