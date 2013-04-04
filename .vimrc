@@ -165,5 +165,3 @@ let g:snippets_dir = '~/vimconf/snippets/'
 if filereadable(expand('~/vimconf/.local.vimrc'))
     source ~/vimconf/.local.vimrc
 endif
-set list
-	
