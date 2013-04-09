@@ -28,7 +28,7 @@ NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'msanders/snipmate.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'thinca/vim-ref'
-NeoBundle 'ujihisa/quickrun'
+NeoBundle 'thinca/vim-showtime'
 NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-scripts/TwitVim'
 NeoBundle 'vim-scripts/IndentAnything'
@@ -37,7 +37,6 @@ NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'kana/vim-tabpagecd'
 "color scheme
-NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'nanotech/jellybeans.vim'
 
 filetype plugin indent on
