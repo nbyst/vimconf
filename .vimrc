@@ -5,14 +5,14 @@ if has('vim_starting')
 endif
 "neobundleが管理するプラグインを入れるdirのpath
 call neobundle#rc(expand('~/.vim/bundle'))
-"NeoBundle 'git://github.com/Shougo/vimfiler.git'
-"NeoBundle 'git://github.com/Shougo/vimshell.git'
-"NeoBundle 'git://github.com/fuenor/qfixhowm.git'
-"NeoBundle 'git://github.com/immerzeel/vim-remember-the-milk.git' 
+"NeoBundle 'immerzeel/vim-remember-the-milk' 
 "NeoBundle 'basyura/jslint.vim'
-"NeoBundle 'git://github.com/hallettj/jslint.vim.git'
-NeoBundle 'git://github.com/mattn/benchvimrc-vim.git' 
+"NeoBundle 'hallettj/jslint.vim'
+"NeoBundle 'mattn/benchvimrc-vim' 
 NeoBundle 'ujihisa/quickrun'
+"NeoBundle 'Shougo/vimfiler'
+"NeoBundle 'Shougo/vimshell'
+"NeoBundle 'fuenor/qfixhowm'
 NeoBundle	'Shougo/neocomplcache'
 NeoBundle 'Shougo/vimproc', {	'build' : {
 			\		'unix': 'make -f make_unix.mak',
@@ -22,12 +22,12 @@ NeoBundle 'Shougo/vimproc', {	'build' : {
 			\}
 NeoBundle	'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'gmarik/vundle' 
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'msanders/snipmate.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'thinca/vim-ref'
+"NeoBundle 'thinca/vim-painter'
 NeoBundle 'thinca/vim-showtime'
 NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-scripts/TwitVim'
