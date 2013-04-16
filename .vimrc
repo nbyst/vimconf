@@ -158,7 +158,6 @@ let g:quickrun_config={'*': {'split': ''}}
 "
 let g:snippets_dir = '~/vimconf/snippets/'
 
-
 "**************************
 "localのvimrc
 if filereadable(expand('~/vimconf/.local.vimrc'))
