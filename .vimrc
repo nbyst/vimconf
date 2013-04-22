@@ -22,6 +22,7 @@ NeoBundle 'Shougo/vimproc', {	'build' : {
 			\}
 NeoBundle	'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'msanders/snipmate.vim'
@@ -167,6 +168,7 @@ let g:quickrun_config={'*': {'split': ''}}
 "
 let g:snippets_dir = '~/vimconf/snippets/'
 
+nnoremap ,uo :Unite -no-quit -vertical -winwidth=30 outline<CR>
 "**************************
 "localのvimrc
 if filereadable(expand('~/vimconf/.local.vimrc'))
