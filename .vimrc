@@ -10,7 +10,7 @@ call neobundle#rc(expand('~/.vim/bundle'))
 "NeoBundle 'hallettj/jslint.vim'
 "NeoBundle 'mattn/benchvimrc-vim' 
 NeoBundle 'ujihisa/quickrun'
-"NeoBundle 'Shougo/vimfiler'
+NeoBundle 'Shougo/vimfiler'
 "NeoBundle 'Shougo/vimshell'
 "NeoBundle 'fuenor/qfixhowm'
 NeoBundle	'Shougo/neocomplcache'
@@ -38,6 +38,7 @@ NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'kana/vim-tabpagecd'
 "color scheme
 NeoBundle 'nanotech/jellybeans.vim'
+NeoBundleCheck
 
 filetype plugin indent on
 colorscheme desert
@@ -82,10 +83,11 @@ ab rj  }-->
 "----------------------------------
 " map 
 "----------------------------------
-nnoremap <leader>d <ESC>i<C-R>=strftime("%Y/%m/%d (%a) %H:%M")<CR><CR>
-nnoremap dl <ESC>:!deploy<CR>
-nnoremap dr <ESC>:!deploy r<CR>
-nnoremap df <ESC>:!file %<CR>
+nnoremap Y y$
+nnoremap <leader>s :%s/
+vnoremap <leader>s :%s/
+nnoremap <leader>d i<C-R>=strftime("%Y/%m/%d (%a) %H:%M")<CR><CR>
+nnoremap dr :!deploy r<CR>
 " F1を無効化
 nnoremap <F1> <Nop>
 inoremap <F1> <Nop>
@@ -107,6 +109,11 @@ nnoremap gp :cp<CR>
 "nnoremap sl :set list<CR>
 "nnoremap nl :set nolist<CR>
 " nnoremap <Tab> :tabf<space>
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+onoremap ) t)
 "ファイル名を表示(full path)
 nnoremap fn :echo expand("%:p")<CR>
 "ファイルタイプを表示
@@ -114,10 +121,12 @@ nnoremap fn :echo expand("%:p")<CR>
 "----------------------------------
 " file, 言語ごとの設定
 "----------------------------------
+
 autocmd FileType php setl expandtab shiftwidth=4 softtabstop=4 tabstop=4
-autocmd FileType python setlocal ts=4 sw=4 sta et sts ai
+autocmd FileType python setlocal ts=4 sw=4 sta et sts ai expandtab
 autocmd FileType html setlocal et ai
 autocmd FileType smarty setlocal et ai
+
 "for javascript
 au FileType javascript set ts=2 sw=2 
 au BufNewFile *.js set ft=javascript fenc=utf-8
