@@ -37,6 +37,9 @@ NeoBundle 'vim-scripts/JavaScript-Indent'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'kana/vim-tabpagecd'
+NeoBundle 'tyru/skk.vim'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-scripts/desertEx'
 "color scheme
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'tyru/skk.vim'
@@ -57,6 +60,7 @@ set showmatch
 set incsearch
 "status line関連
 set wildmenu
+set nowrap
 "set wildmode=list:longest //set disable for speedy
 "encording関係
 set fileencodings=utf-8,iso-2022-jp,euc-jp,cp932
@@ -81,8 +85,7 @@ command! -nargs=+ -bang -complete=file Rename let pbnr=fnamemodify(bufname('%'),
 "----------------------------------
 " ab 
 "----------------------------------
-ab lj <!--{
-ab rj  }-->
+ab 9- --------------------------------
 "----------------------------------
 " map 
 "----------------------------------
@@ -90,7 +93,6 @@ nnoremap Y y$
 nnoremap <leader>s :%s/
 vnoremap <leader>s :%s/
 nnoremap <leader>d i<C-R>=strftime("%Y/%m/%d (%a) %H:%M")<CR><CR>
-nnoremap dr :!deploy r<CR>
 " F1を無効化
 nnoremap <F1> <Nop>
 inoremap <F1> <Nop>
@@ -173,6 +175,6 @@ let g:snippets_dir = '~/vimconf/snippets/'
 nnoremap ,uo :Unite -no-quit -vertical -winwidth=30 outline<CR>
 "**************************
 "localのvimrc
-if filereadable(expand('~/vimconf/.local.vimrc'))
-    source ~/vimconf/.local.vimrc
+if filereadable(expand('~/.local.vimrc'))
+    source ~/.local.vimrc
 endif
