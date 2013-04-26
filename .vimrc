@@ -39,6 +39,8 @@ NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'kana/vim-tabpagecd'
 "color scheme
 NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'tyru/skk.vim'
+NeoBundle 'yuratomo/w3m.vim'
 NeoBundleCheck
 
 filetype plugin indent on
