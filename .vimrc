@@ -8,7 +8,6 @@ call neobundle#rc(expand('~/.vim/bundle'))
 "NeoBundle 'immerzeel/vim-remember-the-milk' 
 "NeoBundle 'basyura/jslint.vim'
 "NeoBundle 'hallettj/jslint.vim'
-"NeoBundle 'mattn/benchvimrc-vim' 
 NeoBundle 'ujihisa/quickrun'
 NeoBundle 'Shougo/vimfiler'
 "NeoBundle 'Shougo/vimshell'
@@ -25,9 +24,11 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/zencoding-vim'
+"NeoBundle 'mattn/benchvimrc-vim' 
 NeoBundle 'msanders/snipmate.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'thinca/vim-ref'
+NeoBundle 'tpope/vim-surround'
 "NeoBundle 'thinca/vim-painter'
 NeoBundle 'thinca/vim-showtime'
 NeoBundle 'vim-scripts/sudo.vim'
@@ -37,17 +38,16 @@ NeoBundle 'vim-scripts/JavaScript-Indent'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'kana/vim-tabpagecd'
-NeoBundle 'tyru/skk.vim'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'vim-scripts/desertEx'
+"NeoBundle 'tyru/skk.vim'
+NeoBundle 'yuratomo/w3m.vim'
+
 "color scheme
 NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'tyru/skk.vim'
-NeoBundle 'yuratomo/w3m.vim'
+"NeoBundle 'vim-scripts/desertEx'
 NeoBundleCheck
 
 filetype plugin indent on
-colorscheme desert
+colorscheme blackdust
 
 "無名レジスタに入るデータが*レジスタにも入るようにする->他のアプリケーションでも使える
 set clipboard+=unnamed
