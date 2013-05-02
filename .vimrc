@@ -40,9 +40,9 @@ NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'kana/vim-tabpagecd'
 "NeoBundle 'tyru/skk.vim'
 NeoBundle 'yuratomo/w3m.vim'
-
 "color scheme
 NeoBundle 'nanotech/jellybeans.vim'
+"NeoBundle 'altercation/vim-colors-solarized'
 "NeoBundle 'vim-scripts/desertEx'
 NeoBundleCheck
 
@@ -123,6 +123,7 @@ onoremap ) t)
 nnoremap fn :echo expand("%:p")<CR>
 "ファイルタイプを表示
 "nnoremap ft :echo &ft<CR>
+nnoremap <leader>g :W3m google 
 "----------------------------------
 " file, 言語ごとの設定
 "----------------------------------
