@@ -40,7 +40,11 @@ NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'kana/vim-tabpagecd'
 "NeoBundle 'tyru/skk.vim'
 NeoBundle 'yuratomo/w3m.vim'
-"color scheme
+"-------for redmine--------------
+NeoBundle 'kana/vim-metarw'
+NeoBundle 'mattn/vim-metarw-redmine'
+NeoBundle 'toritori0318/vim-redmine'
+"----------color scheme-------------
 NeoBundle 'nanotech/jellybeans.vim'
 "NeoBundle 'altercation/vim-colors-solarized'
 "NeoBundle 'vim-scripts/desertEx'
@@ -96,7 +100,7 @@ ab 9- --------------------------------
 nnoremap Y y$
 nnoremap <leader>s :%s/
 vnoremap <leader>s :%s/
-nnoremap <leader>d i<C-R>=strftime("%Y/%m/%d (%a) %H:%M")<CR><CR>
+nnoremap <leader>d i<C-R>=strftime("%Y/%m/%d %H:%M")<CR><CR>
 " F1を無効化
 nnoremap <F1> <Nop>
 inoremap <F1> <Nop>
@@ -105,16 +109,19 @@ nnoremap k gk
 
 nnoremap gi :Git 
 
-"gtags
-nnoremap \g :Gtags <CR>
-nnoremap gF :Gtags -f %<CR>
-nnoremap gc :GtagsCursor<CR>
-nnoremap gn :cn<CR>
-nnoremap gp :cp<CR>
-"
-"nnoremap tl gt
-"nnoremap th gT
-"
+"gtags grep
+nnoremap <C-e> :Gtags -g
+"このファイルの関数一覧
+nnoremap \g :Gtags -f %<CR>
+"cursol上オブジェクトの定義元を探す
+nnoremap <C-g> :Gtags <C-r><C-w><CR>
+"cursol上オブジェクトが呼ばれている場所を探す
+nnoremap <C-k> :Gtags -r <C-r><C-w><CR>
+"検索結果の前後移動
+nnoremap zn :cn<CR>
+nnoremap zp :cp<CR>
+"nnoremap gc :GtagsCursor<CR>
+
 "nnoremap sl :set list<CR>
 "nnoremap nl :set nolist<CR>
 " nnoremap <Tab> :tabf<space>
