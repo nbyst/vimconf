@@ -162,12 +162,12 @@ au BufNewFile *.js set ft=javascript fenc=utf-8
 " pluginや特定の機能の設定
 "----------------------------------
 "neocomplcache
-if filereadable(expand('~/vimconf/neocomplcache.vimrc'))
-    source ~/vimconf/neocomplcache.vimrc
+if filereadable(expand('~/.vim/neocomplcache.vimrc'))
+    source ~/.vim/neocomplcache.vimrc
 endif
 "Unite Settings
-if filereadable(expand('~/vimconf/unite.vimrc'))
-    source ~/vimconf/unite.vimrc
+if filereadable(expand('~/.vim/unite.vimrc'))
+    source ~/.vim/unite.vimrc
 endif
 let g:ref_phpmanual_path = $HOME.'/doc/php-chunked-xhtml'
 let g:ref_sqlitemanual_path = $HOME.'/doc/sqlite-doc'
@@ -175,7 +175,7 @@ let g:ref_sqlitemanual_path = $HOME.'/doc/sqlite-doc'
 "quickrunで横分割
 let g:quickrun_config={'*': {'split': ''}}
 "
-let g:snippets_dir = '~/vimconf/snippets/'
+let g:snippets_dir = '~/.vim/snippets/'
 
 nnoremap ,uo :Unite -no-quit -vertical -winwidth=30 outline<CR>
 "**************************
