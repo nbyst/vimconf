@@ -47,11 +47,16 @@ NeoBundle 'toritori0318/vim-redmine'
 "----------color scheme-------------
 NeoBundle 'nanotech/jellybeans.vim'
 "NeoBundle 'altercation/vim-colors-solarized'
-"NeoBundle 'vim-scripts/desertEx'
+NeoBundle 'vim-scripts/desertEx'
 NeoBundleCheck
 
 filetype plugin indent on
-colorscheme blackdust
+
+"hi Pmenu ctermbg=255 ctermfg=0 guifg=#000000 guibg=#999999
+"hi PmenuSel ctermbg=blue ctermfg=black
+"hi PmenuSbar ctermbg=0 ctermfg=9
+"hi PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFFF
+"hi PmenuThumb ctermfg=3
 
 "無名レジスタに入るデータが*レジスタにも入るようにする->他のアプリケーションでも使える
 set clipboard+=unnamed
@@ -80,6 +85,7 @@ set ambiwidth=double
 set tags=tags,.tags,~/.tags
 syntax on
 set nu
+set pastetoggle=<F2>
 
 "「Rename newfilename」で変更したいファイル名を指定して実行します。
 "!を付けると強制保存して変更
