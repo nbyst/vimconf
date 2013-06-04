@@ -7,4 +7,7 @@ cd $HOME/.vim
 git clone git://github.com/Shougo/neobundle.vim.git
 
 #ctagsを使う場合
-sudo apt-get install exuberant-ctags 
+INST_STAT=`dpkg -l | grep exuberant-ctags`
+if [ -z "$INST_STAT" ]; then
+	sudo apt-get install exuberant-ctags 
+fi
