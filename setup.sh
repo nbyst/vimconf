@@ -1,8 +1,7 @@
 #!/bin/sh
-echo "starting copy vimconf/* to your system"
+VIMCONF=$(cd `dirname $0`; pwd)
 set -x
-
-#ln -s ~/vimconf/.vimrc ~/.vimrc
-#ln -s ~/vimconf/vim ~/.vim
+ln -s $VIMCONF/.vimrc ~/.vimrc
+ln -s $VIMCONF/vim ~/.vim
 cd $HOME/.vim
 git clone git://github.com/Shougo/neobundle.vim.git
