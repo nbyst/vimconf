@@ -21,7 +21,7 @@ NeoBundle 'Shougo/vimproc', {	'build' : {
 			\}
 NeoBundle	'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'h1mesuke/unite-outline'
+"NeoBundle 'h1mesuke/unite-outline' //表示されない事が多かったので
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/zencoding-vim'
 "NeoBundle 'mattn/benchvimrc-vim' 
@@ -185,9 +185,6 @@ endif
 let g:ref_phpmanual_path = $HOME.'/doc/php-chunked-xhtml'
 let g:ref_sqlitemanual_path = $HOME.'/doc/sqlite-doc'
 
-"quickrunで横分割
-let g:quickrun_config={'*': {'split': ''}}
-"
 let g:snippets_dir = '~/.vim/snippets/'
 
 nnoremap ,uo :Unite -no-quit -vertical -winwidth=30 outline<CR>
