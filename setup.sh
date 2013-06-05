@@ -4,7 +4,8 @@ set -x
 ln -s $VIMCONF/.vimrc ~/.vimrc
 ln -s $VIMCONF/vim ~/.vim
 cd $HOME/.vim
-git clone git://github.com/Shougo/neobundle.vim.git
+git submodule add git://github.com/Shougo/neobundle.vim.git vim/neobundle.vim
+git init
 
 #ctagsを使う場合
 INST_STAT=`dpkg -l | grep exuberant-ctags`
