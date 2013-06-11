@@ -48,6 +48,7 @@ NeoBundle 'toritori0318/vim-redmine'
 NeoBundle 'nanotech/jellybeans.vim'
 "NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'vim-scripts/desertEx'
+NeoBundle 'vim-scripts/MultipleSearch'
 NeoBundleCheck
 
 filetype plugin indent on
