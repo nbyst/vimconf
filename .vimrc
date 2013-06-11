@@ -131,6 +131,10 @@ nnoremap zp :cp<CR>
 "nnoremap sl :set list<CR>
 "nnoremap nl :set nolist<CR>
 " nnoremap <Tab> :tabf<space>
+cnoremap <C-j> <Down>
+cnoremap <C-k> <Up>
+cnoremap <C-h> <Left>
+cnoremap <C-l> <Right>
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
 cnoremap <C-a> <Home>
