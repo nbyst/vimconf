@@ -41,9 +41,10 @@ NeoBundle 'kana/vim-tabpagecd'
 "NeoBundle 'tyru/skk.vim'
 NeoBundle 'yuratomo/w3m.vim'
 "-------for redmine--------------
-NeoBundle 'kana/vim-metarw'
-NeoBundle 'mattn/vim-metarw-redmine'
-NeoBundle 'toritori0318/vim-redmine'
+NeoBundle 'basyura/unite-yarm.git'
+"NeoBundle 'kana/vim-metarw'
+"NeoBundle 'mattn/vim-metarw-redmine'
+"NeoBundle 'toritori0318/vim-redmine'
 "----------color scheme-------------
 NeoBundle 'nanotech/jellybeans.vim'
 "NeoBundle 'altercation/vim-colors-solarized'
@@ -75,7 +76,7 @@ set wildmode=list:longest
 
 "encording関係
 set encoding=utf-8
-set fileencodings=utf-8,iso-2022-jp,euc-jp,cp932
+set fileencodings=iso-2022-jp,utf-8,euc-jp,cp932
 
 set fdm=indent
 "日本語の行の連結時には空白を入力しない。
