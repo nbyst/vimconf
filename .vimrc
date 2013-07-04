@@ -194,6 +194,11 @@ nnoremap zn :cn<CR>
 nnoremap zp :cp<CR>
 "nnoremap gc :GtagsCursor<CR>
 
+"vim-fugitive
+nnoremap <silent> <Space>gb :Gblame<CR>
+nnoremap <silent> <Space>gd :Gdiff<CR>
+nnoremap <silent> <Space>gs :Gstatus<CR>
+
 "**************************
 "localのvimrc
 if filereadable(expand('~/.local.vimrc'))
