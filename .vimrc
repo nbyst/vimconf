@@ -115,24 +115,6 @@ inoremap <F1> <Nop>
 nnoremap j gj
 nnoremap k gk
 
-nnoremap gi :Git 
-
-"gtags grep
-nnoremap <C-e> :Gtags -g
-"このファイルの関数一覧
-nnoremap \g :Gtags -f %<CR>
-"cursol上オブジェクトの定義元を探す
-nnoremap <C-g> :Gtags <C-r><C-w><CR>
-"cursol上オブジェクトが呼ばれている場所を探す
-nnoremap <C-k> :Gtags -r <C-r><C-w><CR>
-"検索結果の前後移動
-nnoremap zn :cn<CR>
-nnoremap zp :cp<CR>
-"nnoremap gc :GtagsCursor<CR>
-
-"nnoremap sl :set list<CR>
-"nnoremap nl :set nolist<CR>
-" nnoremap <Tab> :tabf<space>
 cnoremap <C-j> <Down>
 cnoremap <C-k> <Up>
 cnoremap <C-h> <Left>
@@ -146,7 +128,6 @@ onoremap ) t)
 nnoremap fn :echo expand("%:p")<CR>
 "ファイルタイプを表示
 "nnoremap ft :echo &ft<CR>
-nnoremap <leader>g :W3m google 
 "----------------------------------
 " file, 言語ごとの設定
 "----------------------------------
@@ -180,20 +161,39 @@ au BufNewFile *.js set ft=javascript fenc=utf-8
 "----------------------------------
 " pluginや特定の機能の設定
 "----------------------------------
+"w3m.vim
+nnoremap <leader>g :W3m google 
+
 "neocomplcache
 if filereadable(expand('~/.vim/neocomplcache.vimrc'))
     source ~/.vim/neocomplcache.vimrc
 endif
-"Unite Settings
+
+"unite.vim
 if filereadable(expand('~/.vim/unite.vimrc'))
     source ~/.vim/unite.vimrc
 endif
 let g:ref_phpmanual_path = $HOME.'/doc/php-chunked-xhtml'
 let g:ref_sqlitemanual_path = $HOME.'/doc/sqlite-doc'
+nnoremap ,uo :Unite -no-quit -vertical -winwidth=30 outline<CR>
 
+"snipmate.vim
 let g:snippets_dir = '~/.vim/snippets/'
 
-nnoremap ,uo :Unite -no-quit -vertical -winwidth=30 outline<CR>
+"-- gtags.vim --
+"gtags grep
+nnoremap <C-e> :Gtags -g
+"このファイルの関数一覧
+nnoremap \g :Gtags -f %<CR>
+"cursol上オブジェクトの定義元を探す
+nnoremap <C-g> :Gtags <C-r><C-w><CR>
+"cursol上オブジェクトが呼ばれている場所を探す
+nnoremap <C-k> :Gtags -r <C-r><C-w><CR>
+"検索結果の前後移動
+nnoremap zn :cn<CR>
+nnoremap zp :cp<CR>
+"nnoremap gc :GtagsCursor<CR>
+
 "**************************
 "localのvimrc
 if filereadable(expand('~/.local.vimrc'))
