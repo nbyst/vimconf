@@ -1,2 +1,3 @@
 .local.vimrc
 vim/bundle/*
+vim/neobndle.vim
