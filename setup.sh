@@ -3,9 +3,7 @@ VIMCONF=$(cd `dirname $0`; pwd)
 set -x
 ln -s $VIMCONF/.vimrc ~/.vimrc
 ln -s $VIMCONF/vim ~/.vim
-cd $HOME/.vim
-git submodule add git://github.com/Shougo/neobundle.vim.git vim/neobundle.vim
-git init
+git clone git://github.com/Shougo/neobundle.vim.git ~/.vim/neobundle.vim
 
 #ctagsを使う場合
 INST_STAT=`dpkg -l | grep exuberant-ctags`

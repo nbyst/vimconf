@@ -76,7 +76,7 @@ set wildmode=list:longest
 
 "encording関係
 set encoding=utf-8
-set fileencodings=utf-8,cp932,euc-jp,iso-2022-jp,
+set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp,default,latin
 
 set fdm=indent
 "日本語の行の連結時には空白を入力しない。
