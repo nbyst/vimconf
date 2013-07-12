@@ -41,9 +41,8 @@ NeoBundle 'kana/vim-tabpagecd'
 "NeoBundle 'tyru/skk.vim'
 NeoBundle 'yuratomo/w3m.vim'
 "-------for redmine--------------
-NeoBundle 'basyura/unite-yarm.git'
-"NeoBundle 'kana/vim-metarw'
-"NeoBundle 'mattn/vim-metarw-redmine'
+NeoBundle 'kana/vim-metarw'
+NeoBundle 'mattn/vim-metarw-redmine'
 "NeoBundle 'toritori0318/vim-redmine'
 "----------color scheme-------------
 NeoBundle 'nanotech/jellybeans.vim'
