@@ -32,7 +32,6 @@ NeoBundle 'tpope/vim-surround'
 "NeoBundle 'thinca/vim-painter'
 NeoBundle 'thinca/vim-showtime'
 NeoBundle 'vim-scripts/sudo.vim'
-"NeoBundle 'vim-scripts/TwitVim'
 NeoBundle 'vim-scripts/IndentAnything'
 NeoBundle 'vim-scripts/JavaScript-Indent'
 NeoBundle 'vim-scripts/taglist.vim'
@@ -40,15 +39,17 @@ NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'kana/vim-tabpagecd'
 "NeoBundle 'tyru/skk.vim'
 NeoBundle 'yuratomo/w3m.vim'
+NeoBundle 'rking/ag.vim'
+NeoBundle 'vim-scripts/MultipleSearch'
+NeoBundle 'plasticboy/vim-markdown'
 "-------for redmine--------------
 NeoBundle 'kana/vim-metarw'
-NeoBundle 'mattn/vim-metarw-redmine'
+NeoBundle 'mattn/vim-metarw-redmine' "need vim-metarw
 "NeoBundle 'toritori0318/vim-redmine'
 "----------color scheme-------------
 NeoBundle 'nanotech/jellybeans.vim'
 "NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'vim-scripts/desertEx'
-NeoBundle 'vim-scripts/MultipleSearch'
 NeoBundleCheck
 
 filetype plugin indent on
