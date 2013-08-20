@@ -204,3 +204,10 @@ nnoremap <silent> <Space>gs :Gstatus<CR>
 if filereadable(expand('~/.local.vimrc'))
     source ~/.local.vimrc
 endif
+
+
+function! Vgrep(str)
+	let key = a:str
+	execute 'vimgrep /' . l:key .'/ % | cw'
+endfunction
+command! -nargs=+ Vg :call Vgrep(<f-args>)
