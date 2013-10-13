@@ -72,7 +72,7 @@ set showmatch
 set incsearch
 "status line関連
 set wildmenu
-set nowrap
+set wrap
 set wildmode=list:longest 
 
 "encording関係
