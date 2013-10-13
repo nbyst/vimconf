@@ -51,6 +51,7 @@ NeoBundle 'mattn/vim-metarw-redmine' "need vim-metarw
 NeoBundle 'nanotech/jellybeans.vim'
 "NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'vim-scripts/desertEx'
+NeoBundle 'kannokanno/previm'
 NeoBundleCheck
 
 filetype plugin indent on
@@ -199,6 +200,12 @@ nnoremap zp :cp<CR>
 nnoremap <silent> <Space>gb :Gblame<CR>
 nnoremap <silent> <Space>gd :Gdiff<CR>
 nnoremap <silent> <Space>gs :Gstatus<CR>
+
+"previm
+"let g:previm_open_cmd = 'google-chrome'
+" 指定すると:PrevimOpen後にvim再編集ができなかったのでコメントアウト
+" 2013/10/13 17:05
+
 
 "**************************
 "localのvimrc
