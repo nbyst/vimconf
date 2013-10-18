@@ -67,7 +67,7 @@ set clipboard+=unnamed
 set mouse=a
 set cindent
 set autoindent 
-set tabstop=2 sw=2 sts=2
+set tabstop=4 sw=4 sts=4
 "set tabpagemax=15
 set showmatch
 set incsearch
