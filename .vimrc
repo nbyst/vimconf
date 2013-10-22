@@ -54,6 +54,8 @@ NeoBundle 'vim-scripts/desertEx'
 NeoBundle 'kannokanno/previm'
 NeoBundleCheck
 
+colorscheme desert
+
 filetype plugin indent on
 
 "hi Pmenu ctermbg=255 ctermfg=0 guifg=#000000 guibg=#999999
