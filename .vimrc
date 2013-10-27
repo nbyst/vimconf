@@ -43,6 +43,7 @@ NeoBundle 'yuratomo/w3m.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'vim-scripts/MultipleSearch'
 "NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'Blackrush/vim-gocode'
 "-------for redmine--------------
 NeoBundle 'kana/vim-metarw'
 NeoBundle 'mattn/vim-metarw-redmine' "need vim-metarw
@@ -91,6 +92,7 @@ set tags=tags,.tags,~/.tags
 syntax on
 set nu
 set pastetoggle=<F2>
+set completeopt=menu,preview
 
 "「Rename newfilename」で変更したいファイル名を指定して実行します。
 "!を付けると強制保存して変更
@@ -208,6 +210,9 @@ nnoremap <silent> <Space>gs :Gstatus<CR>
 " 指定すると:PrevimOpen後にvim再編集ができなかったのでコメントアウト
 " 2013/10/13 17:05
 
+"gocodeの設定
+set rtp+=$GOROOT/misc/vim
+exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 
 "**************************
 "localのvimrc
