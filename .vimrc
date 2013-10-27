@@ -23,7 +23,7 @@ NeoBundle	'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
 "NeoBundle 'h1mesuke/unite-outline' //表示されない事が多かったので
 NeoBundle 'mattn/webapi-vim'
-NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'mattn/emmet-vim'	 " emmet-vim was called 'zencoding-vim'
 "NeoBundle 'mattn/benchvimrc-vim' 
 NeoBundle 'msanders/snipmate.vim'
 NeoBundle 'tpope/vim-fugitive'
