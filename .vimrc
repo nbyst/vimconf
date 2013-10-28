@@ -214,6 +214,9 @@ nnoremap <silent> <Space>gs :Gstatus<CR>
 set rtp+=$GOROOT/misc/vim
 exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 
+"sudo.vim
+command! Ws :w sudo:%
+
 "**************************
 "localのvimrc
 if filereadable(expand('~/.local.vimrc'))
@@ -226,3 +229,4 @@ function! Vgrep(str)
 	execute 'vimgrep /' . l:key .'/ % | cw'
 endfunction
 command! -nargs=+ Vg :call Vgrep(<f-args>)
+
