@@ -48,11 +48,11 @@ NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'kana/vim-metarw'
 NeoBundle 'mattn/vim-metarw-redmine' "need vim-metarw
 "NeoBundle 'toritori0318/vim-redmine'
+NeoBundle 'kannokanno/previm'
 "----------color scheme-------------
 "NeoBundle 'nanotech/jellybeans.vim'
 "NeoBundle 'altercation/vim-colors-solarized'
 "NeoBundle 'vim-scripts/desertEx'
-NeoBundle 'kannokanno/previm'
 NeoBundleCheck
 
 colorscheme desert
