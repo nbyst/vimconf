@@ -112,7 +112,7 @@ ab 9- --------------------------------
 "----------------------------------
 nnoremap Y y$
 nnoremap <leader>l :set list!<CR>
-nnoremap <leader>s :%s/
+nnoremap <leader>w :set wrap!<CR>
 vnoremap <leader>s :%s/
 nnoremap <leader>d i<C-R>=strftime("%Y/%m/%d %H:%M")<CR><CR>
 " F1を無効化
