@@ -80,7 +80,12 @@ set wrap
 set wildmode=list:longest 
 
 "encording関係
-set encoding=utf-8
+if has('win32') || has('win64') || split(system('uname'),'_')[0] == 'MINGW32'
+	set encoding=cp932
+else
+	set encoding=utf-8
+endif
+
 set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp,default,latin
 
 set fdm=indent
