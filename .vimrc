@@ -44,6 +44,7 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'vim-scripts/MultipleSearch'
 "NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'Blackrush/vim-gocode'
+NeoBundle 'h1mesuke/unite-outline'
 "-------for redmine--------------
 NeoBundle 'kana/vim-metarw'
 NeoBundle 'mattn/vim-metarw-redmine' "need vim-metarw
@@ -53,6 +54,8 @@ NeoBundle 'kannokanno/previm'
 "NeoBundle 'nanotech/jellybeans.vim'
 "NeoBundle 'altercation/vim-colors-solarized'
 "NeoBundle 'vim-scripts/desertEx'
+"--------- syntax hilighting ---------
+NeoBundle 'plasticboy/vim-markdown'
 NeoBundleCheck
 
 colorscheme desert
@@ -139,6 +142,10 @@ onoremap ) t)
 nnoremap fn :echo expand("%:p")<CR>
 "ファイルタイプを表示
 "nnoremap ft :echo &ft<CR>
+
+"範囲内検索
+vnoremap z/ <ESC>/\%V
+
 "----------------------------------
 " file, 言語ごとの設定
 "----------------------------------
