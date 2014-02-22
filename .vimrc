@@ -21,6 +21,7 @@ NeoBundle 'Shougo/vimproc', {	'build' : {
 			\}
 NeoBundle	'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 "NeoBundle 'h1mesuke/unite-outline' //表示されない事が多かったので
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/emmet-vim'	 " emmet-vim was called 'zencoding-vim'
@@ -33,7 +34,6 @@ NeoBundle 'thinca/vim-ref'
 NeoBundle 'thinca/vim-showtime'
 NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-scripts/IndentAnything'
-NeoBundle 'vim-scripts/JavaScript-Indent'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/gtags.vim'
 "NeoBundle 'kana/vim-tabpagecd'
@@ -42,9 +42,13 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'yuratomo/w3m.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'vim-scripts/MultipleSearch'
-"NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'h1mesuke/unite-outline'
+"-------for each language--------------
+"NeoBundle 'vim-scripts/JavaScript-Indent'
+"NeoBundle 'Glench/Vim-Jinja2-Syntax'
+NeoBundle 'mitsuhiko/vim-jinja'
+NeoBundle 'davidhalter/jedi-vim'
 "-------for redmine--------------
 NeoBundle 'kana/vim-metarw'
 NeoBundle 'mattn/vim-metarw-redmine' "need vim-metarw
@@ -102,6 +106,14 @@ set nu
 set pastetoggle=<F2>
 set completeopt=menu,preview
 
+"swapfile and backupfile settings
+silent !mkdir -p /tmp/.vimbackup
+set backup
+set backupdir=/tmp/.vimbackup
+silent !mkdir -p /tmp/.vimswap
+set swapfile
+set directory=/tmp/.vimswap
+
 "「Rename newfilename」で変更したいファイル名を指定して実行します。
 "!を付けると強制保存して変更
 command! -nargs=+ -bang -complete=file Rename let pbnr=fnamemodify(bufname('%'), ':p')|exec 'f '.escape(<q-args>, ' ')|w<bang>|call delete(pbnr)
@@ -111,10 +123,7 @@ command! -nargs=+ -bang -complete=file Rename let pbnr=fnamemodify(bufname('%'),
 "function! ForceImeOff()
 "		let imeoff = system('xvkbd -text "\[Control]\[Shift]\[space]" > /dev/null 2>&1')
 "endfunction
-"----------------------------------
-" ab 
-"----------------------------------
-ab 9- --------------------------------
+
 "----------------------------------
 " map 
 "----------------------------------
@@ -150,31 +159,30 @@ vnoremap z/ <ESC>/\%V
 " file, 言語ごとの設定
 "----------------------------------
 
-autocmd FileType php setl expandtab shiftwidth=4 softtabstop=4 tabstop=4
-autocmd FileType python setlocal ts=4 sw=4 sta et sts ai expandtab
-autocmd FileType html setlocal et ai
-autocmd FileType smarty setlocal et ai
 
-"for javascript
-au FileType javascript set ts=2 sw=2 
-au BufNewFile *.js set ft=javascript fenc=utf-8
+augroup filetypedetect
+	au BufRead,BufNewFile Makefile setfiletype make
+	autocmd FileType php setl expandtab shiftwidth=4 softtabstop=4 tabstop=4
+	autocmd FileType python setlocal ts=4 sw=4 sts=4 sta ai expandtab
+	autocmd FileType html setlocal expandtab ai
+	autocmd FileType htmljinja setlocal expandtab ai
+	autocmd FileType smarty setlocal et ai
+
+	"for javascript
+	au FileType javascript set ts=2 sw=2 
+	au BufNewFile *.js set ft=javascript fenc=utf-8
 "jslint.vimfunction! s:  autocmd BufLeave
 "&lt;buffer&gt; call jslint#clear()  autocmd BufWritePost &lt;buffer&gt; call
 "jslint#check()  autocmd CursorMoved  &lt;buffer&gt; call
 "jslint#message()endfunctionautocmd FileType javascript call
 "s:javascript_filetype_settings()
 
-" basyura さんの示した設定
-"augroup MyGroup
-"	autocmd! MyGroup
-"	autocmd FileType javascript call s:javascript_filetype_settings()
-"augroup END
-"
 "function! s:javascript_filetype_settings()
 "	autocmd BufLeave     <buffer> call jslint#clear()
 "	autocmd BufWritePost <buffer> call jslint#check()
 "	autocmd CursorMoved  <buffer> call jslint#message()
 "endfunction
+augroup END
 
 "----------------------------------
 " pluginや特定の機能の設定
