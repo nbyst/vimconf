@@ -106,6 +106,10 @@ set nu
 set pastetoggle=<F2>
 set completeopt=menu,preview
 
+set list
+set listchars=tab:»_,trail:-
+
+
 "swapfile and backupfile settings
 silent !mkdir -p /tmp/.vimbackup
 set backup
