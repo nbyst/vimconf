@@ -159,6 +159,7 @@ nnoremap fn :echo expand("%:p")<CR>
 "範囲内検索
 vnoremap z/ <ESC>/\%V
 
+nnoremap r :QuickRun<CR>
 "----------------------------------
 " file, 言語ごとの設定
 "----------------------------------
@@ -191,6 +192,15 @@ augroup END
 "----------------------------------
 " pluginや特定の機能の設定
 "----------------------------------
+"Quickrun
+"quickrunで横分割
+let g:quickrun_config={'*': {'split': ''}}
+
+let g:quickrun_config['lisp'] = {
+\   'command': 'clisp',
+\   'eval': 1,
+\   'eval_template': '(print %s)',
+\}
 "w3m.vim
 nnoremap <leader>g :W3m google 
 
