@@ -22,7 +22,7 @@ NeoBundle 'Shougo/vimproc', {	'build' : {
 NeoBundle	'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
-"NeoBundle 'h1mesuke/unite-outline' //表示されない事が多かったので
+NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/emmet-vim'	 " emmet-vim was called 'zencoding-vim'
 "NeoBundle 'mattn/benchvimrc-vim' 
@@ -43,12 +43,9 @@ NeoBundle 'yuratomo/w3m.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'vim-scripts/MultipleSearch'
 NeoBundle 'Blackrush/vim-gocode'
-NeoBundle 'h1mesuke/unite-outline'
-"-------for each language--------------
-"NeoBundle 'vim-scripts/JavaScript-Indent'
-"NeoBundle 'Glench/Vim-Jinja2-Syntax'
 NeoBundle 'mitsuhiko/vim-jinja'
 NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'scrooloose/nerdcommenter'
 "-------for redmine--------------
 NeoBundle 'kana/vim-metarw'
 NeoBundle 'mattn/vim-metarw-redmine' "need vim-metarw
@@ -201,6 +198,14 @@ let g:quickrun_config['lisp'] = {
 \   'eval': 1,
 \   'eval_template': '(print %s)',
 \}
+
+"NERD Commenter
+" コメントした後に挿入するスペースの数
+let NERDSpaceDelims = 1
+" キーマップの変更。<Leader>=\+cでコメント化と解除を行う。
+nmap <Leader>c <Plug>NERDCommenterToggle
+vmap <Leader>c <Plug>NERDCommenterToggle
+
 "w3m.vim
 nnoremap <leader>g :W3m google 
 
@@ -215,7 +220,7 @@ if filereadable(expand('~/.vim/unite.vimrc'))
 endif
 let g:ref_phpmanual_path = $HOME.'/doc/php-chunked-xhtml'
 let g:ref_sqlitemanual_path = $HOME.'/doc/sqlite-doc'
-nnoremap ,uo :Unite -no-quit -vertical -winwidth=30 outline<CR>
+nnoremap ,uo :Unite -no-quit -vertical -winwidth=50 outline<CR>
 
 "snipmate.vim
 let g:snippets_dir = '~/.vim/snippets/'
