@@ -52,9 +52,9 @@ NeoBundle 'mattn/vim-metarw-redmine' "need vim-metarw
 "NeoBundle 'toritori0318/vim-redmine'
 NeoBundle 'kannokanno/previm'
 "----------color scheme-------------
-"NeoBundle 'nanotech/jellybeans.vim'
-"NeoBundle 'altercation/vim-colors-solarized'
-"NeoBundle 'vim-scripts/desertEx'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'vim-scripts/desertEx'
 "--------- syntax hilighting ---------
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundleCheck
