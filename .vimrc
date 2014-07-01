@@ -22,7 +22,7 @@ NeoBundle 'Shougo/vimproc', {	'build' : {
 NeoBundle	'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'Shougo/unite-outline'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/emmet-vim'	 " emmet-vim was called 'zencoding-vim'
 "NeoBundle 'mattn/benchvimrc-vim' 
