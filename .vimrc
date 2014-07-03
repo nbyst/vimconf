@@ -106,6 +106,7 @@ set completeopt=menu,preview
 set list
 set listchars=tab:»_,trail:-
 
+set modeline
 
 "swapfile and backupfile settings
 silent !mkdir -p /tmp/.vimbackup
