@@ -199,6 +199,13 @@ let g:quickrun_config['lisp'] = {
 \   'eval': 1,
 \   'eval_template': '(print %s)',
 \}
+let g:quickrun_config = {
+\  'go': {
+\    'command': 'go',
+\    'exec': ['go run %s',]
+\  }
+\}
+
 
 "NERD Commenter
 " コメントした後に挿入するスペースの数
