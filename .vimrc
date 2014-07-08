@@ -167,6 +167,7 @@ augroup filetypedetect
 	au BufRead,BufNewFile Makefile setfiletype make
 	autocmd FileType php setl expandtab shiftwidth=4 softtabstop=4 tabstop=4
 	autocmd FileType python setlocal ts=4 sw=4 sts=4 sta ai expandtab
+	autocmd FileType ruby setlocal ts=4 sw=4 sts=4 sta ai expandtab
 	autocmd FileType html setlocal expandtab ai smartindent
 	autocmd FileType htmljinja setlocal expandtab ai smartindent
 	autocmd FileType smarty setlocal et ai
