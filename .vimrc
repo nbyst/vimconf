@@ -55,6 +55,7 @@ NeoBundle 'kannokanno/previm'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'vim-scripts/desertEx'
+NeoBundle 'vim-scripts/newspaper.vim'
 "--------- syntax hilighting ---------
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundleCheck
