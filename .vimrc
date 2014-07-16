@@ -45,6 +45,8 @@ NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'mitsuhiko/vim-jinja'
 "NeoBundle 'davidhalter/jedi-vim'
 "NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'bbatsov/rubocop'
 "-------for redmine--------------
 NeoBundle 'kana/vim-metarw'
 NeoBundle 'mattn/vim-metarw-redmine' "need vim-metarw
