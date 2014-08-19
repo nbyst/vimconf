@@ -146,6 +146,7 @@ cnoremap <C-k> <Up>
 cnoremap <C-h> <Left>
 cnoremap <C-l> <Right>
 inoremap <C-a> <Home>
+inoremap <silent> jj <ESC>
 inoremap <C-e> <End>
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
