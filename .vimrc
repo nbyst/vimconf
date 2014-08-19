@@ -1,4 +1,3 @@
-filetype off
 "neobundle自体のpath
 if has('vim_starting')
 	set runtimepath+=$HOME/.vim/neobundle.vim
@@ -61,7 +60,6 @@ NeoBundle 'vim-scripts/newspaper.vim'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundleCheck
 
-colorscheme desert
 
 filetype plugin indent on
 
@@ -111,12 +109,10 @@ set listchars=tab:»_,trail:-
 set modeline
 
 "swapfile and backupfile settings
-silent !mkdir -p /tmp/.vimbackup
 set backup
-set backupdir=/tmp/.vimbackup
-silent !mkdir -p /tmp/.vimswap
+set backupdir=/tmp
 set swapfile
-set directory=/tmp/.vimswap
+set directory=/tmp
 
 "「Rename newfilename」で変更したいファイル名を指定して実行します。
 "!を付けると強制保存して変更
@@ -280,3 +276,6 @@ function! Vgrep(str)
 endfunction
 command! -nargs=+ Vg :call Vgrep(<f-args>)
 
+
+colorscheme desertEx
+highlight Normal ctermbg=none
