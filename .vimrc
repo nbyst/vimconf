@@ -25,7 +25,7 @@ NeoBundle 'Shougo/unite-outline'
 NeoBundle 'mattn/webapi-vim'
 "NeoBundle 'mattn/emoji-vim'
 NeoBundle 'mattn/emmet-vim'	 " emmet-vim was called 'zencoding-vim'
-"NeoBundle 'mattn/benchvimrc-vim' 
+"NeoBundle 'mattn/benchvimrc-vim'  " :BenchVimrc を実行し%sort すると見やすい
 NeoBundle 'msanders/snipmate.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'thinca/vim-ref'
