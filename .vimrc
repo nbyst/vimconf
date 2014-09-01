@@ -47,6 +47,9 @@ NeoBundle 'mitsuhiko/vim-jinja'
 "NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'bbatsov/rubocop'
+NeoBundle 'aharisu/vim_goshrepl'
+NeoBundle 'aharisu/vim-gdev'
+
 "-------for redmine--------------
 NeoBundle 'kana/vim-metarw'
 NeoBundle 'mattn/vim-metarw-redmine' "need vim-metarw

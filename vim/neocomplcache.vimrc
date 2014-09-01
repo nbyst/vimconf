@@ -25,6 +25,9 @@ let g:neocomplcache_enable_underbar_completion = 1
 "補完ウィンドウの設定 :help completeopt
 set completeopt=menuone
 
+let g:neocomplete#keyword_patterns = {}
+let g:neocomplete#keyword_patterns['gosh-repl'] = "[[:alpha:]+*/@$_=.!?-][[:alnum:]+*/@$_:=.!?-]*"
+
 " 現在のバッファのタグファイルを生成する
 " neocomplcache からタグファイルのパスを取得して、tags に追加する
 nnoremap <expr><Space>tu g:TagsUpdate()
