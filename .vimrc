@@ -173,6 +173,7 @@ augroup filetypedetect
 	autocmd FileType html setlocal expandtab ai smartindent
 	autocmd FileType htmljinja setlocal expandtab ai smartindent
 	autocmd FileType smarty setlocal et ai
+	autocmd FileType scheme setlocal autoindent expandtab
 
 	"for javascript
 	au FileType javascript set ts=2 sw=2 
