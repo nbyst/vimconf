@@ -8,7 +8,7 @@ call neobundle#rc(expand('~/.vim/bundle'))
 "NeoBundle 'basyura/jslint.vim'
 "NeoBundle 'hallettj/jslint.vim'
 NeoBundle 'ujihisa/quickrun'
-NeoBundle 'Shougo/vimfiler'
+"NeoBundle 'Shougo/vimfiler'
 "NeoBundle 'Shougo/vimshell'
 "NeoBundle 'fuenor/qfixhowm'
 NeoBundle	'Shougo/neocomplcache'
@@ -31,7 +31,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'thinca/vim-ref'
 "NeoBundle 'tpope/vim-surround'
 "NeoBundle 'thinca/vim-painter'
-NeoBundle 'thinca/vim-showtime'
+"NeoBundle 'thinca/vim-showtime'
 NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-scripts/IndentAnything'
 NeoBundle 'vim-scripts/taglist.vim'
@@ -39,8 +39,8 @@ NeoBundle 'vim-scripts/gtags.vim'
 "NeoBundle 'kana/vim-tabpagecd'
 "NeoBundle 'tyru/skk.vim'
 NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'rking/ag.vim'
-NeoBundle 'vim-scripts/MultipleSearch'
+"NeoBundle 'rking/ag.vim'
+"NeoBundle 'vim-scripts/MultipleSearch'
 NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'mitsuhiko/vim-jinja'
 "NeoBundle 'davidhalter/jedi-vim'
@@ -64,7 +64,7 @@ NeoBundle 'vim-scripts/newspaper.vim'
 "NeoBundle 'luckydev/150colors'
 "--------- syntax hilighting ---------
 NeoBundle 'plasticboy/vim-markdown'
-NeoBundleCheck
+"NeoBundleCheck
 
 
 filetype plugin indent on
@@ -133,6 +133,7 @@ command! -nargs=+ -bang -complete=file Rename let pbnr=fnamemodify(bufname('%'),
 "----------------------------------
 " map 
 "----------------------------------
+nnoremap - %
 nnoremap Y y$
 nnoremap <leader>l :set list!<CR>
 nnoremap <leader>w :set wrap!<CR>
@@ -286,4 +287,5 @@ command! -nargs=+ Vg :call Vgrep(<f-args>)
 
 
 colorscheme desertEx
+"colorscheme newspaper
 highlight Normal ctermbg=none
