@@ -8,7 +8,7 @@ call neobundle#rc(expand('~/.vim/bundle'))
 "NeoBundle 'basyura/jslint.vim'
 "NeoBundle 'hallettj/jslint.vim'
 NeoBundle 'ujihisa/quickrun'
-"NeoBundle 'Shougo/vimfiler'
+NeoBundle 'Shougo/vimfiler'
 "NeoBundle 'Shougo/vimshell'
 "NeoBundle 'fuenor/qfixhowm'
 NeoBundle	'Shougo/neocomplcache'
@@ -24,7 +24,9 @@ NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'mattn/webapi-vim'
 "NeoBundle 'mattn/emoji-vim'
-NeoBundle 'mattn/emmet-vim'	 " emmet-vim was called 'zencoding-vim'
+NeoBundle 'mattn/emmet-vim', {
+			\"autoload" : {"filetypes" :[ "html" ]}
+			\}
 "NeoBundle 'mattn/benchvimrc-vim'  " :BenchVimrc を実行し%sort すると見やすい
 NeoBundle 'msanders/snipmate.vim'
 NeoBundle 'tpope/vim-fugitive'
@@ -45,16 +47,21 @@ NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'mitsuhiko/vim-jinja'
 "NeoBundle 'davidhalter/jedi-vim'
 "NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'bbatsov/rubocop'
-NeoBundle 'aharisu/vim_goshrepl'
-NeoBundle 'aharisu/vim-gdev'
+NeoBundle 'vim-ruby/vim-ruby', {
+			\"autoload" : {"filetypes" :["ruby"]}
+			\}
+NeoBundle 'bbatsov/rubocop', {
+			\"autoload" : {"filetypes" :["ruby"]}
+			\}
+NeoBundle 'aharisu/vim_goshrepl', {
+			\"autoload" : {"filetypes" :["ruby"]}
+			\}
+"NeoBundle 'aharisu/vim-gdev' " Gauche用のプラグイン
 
 "-------for redmine--------------
-NeoBundle 'kana/vim-metarw'
-NeoBundle 'mattn/vim-metarw-redmine' "need vim-metarw
+"NeoBundle 'kana/vim-metarw'
+"NeoBundle 'mattn/vim-metarw-redmine' "need vim-metarw
 "NeoBundle 'toritori0318/vim-redmine'
-NeoBundle 'kannokanno/previm'
 "----------color scheme-------------
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'altercation/vim-colors-solarized'
@@ -62,9 +69,10 @@ NeoBundle 'vim-scripts/desertEx'
 NeoBundle 'vim-scripts/newspaper.vim'
 "NeoBundle 'vim-scripts/candy.vim'
 "NeoBundle 'luckydev/150colors'
-"--------- syntax hilighting ---------
+"--------- for markdown ---------
 NeoBundle 'plasticboy/vim-markdown'
-"NeoBundleCheck
+"NeoBundle 'kannokanno/previm'
+NeoBundleCheck
 
 
 filetype plugin indent on
