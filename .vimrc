@@ -44,7 +44,9 @@ NeoBundle 'tyru/open-browser.vim'
 "NeoBundle 'rking/ag.vim'
 "NeoBundle 'vim-scripts/MultipleSearch'
 NeoBundle 'Blackrush/vim-gocode'
-NeoBundle 'mitsuhiko/vim-jinja'
+NeoBundle 'mitsuhiko/vim-jinja', {
+			\"autoload" : {"filetypes" :["htmljinja"]}
+			\}
 "NeoBundle 'davidhalter/jedi-vim'
 "NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'vim-ruby/vim-ruby', {
