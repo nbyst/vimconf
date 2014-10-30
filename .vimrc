@@ -47,7 +47,9 @@ NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'mitsuhiko/vim-jinja', {
 			\"autoload" : {"filetypes" :["htmljinja"]}
 			\}
-"NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'davidhalter/jedi-vim', {
+			\"autoload" : {"filetypes" :["python"]}
+			\}
 "NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'vim-ruby/vim-ruby', {
 			\"autoload" : {"filetypes" :["ruby"]}
@@ -297,6 +299,8 @@ endfunction
 command! -nargs=+ Vg :call Vgrep(<f-args>)
 
 
-colorscheme desertEx
+"colorscheme desertEx
 "colorscheme newspaper
+"colorscheme desert
+colorscheme jellybeans
 highlight Normal ctermbg=none
