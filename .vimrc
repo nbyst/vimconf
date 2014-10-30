@@ -3,7 +3,7 @@ if has('vim_starting')
 	set runtimepath+=$HOME/.vim/neobundle.vim
 endif
 "neobundleが管理するプラグインを入れるdirのpath
-call neobundle#rc(expand('~/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
 "NeoBundle 'immerzeel/vim-remember-the-milk' 
 "NeoBundle 'basyura/jslint.vim'
 "NeoBundle 'hallettj/jslint.vim'
@@ -74,6 +74,7 @@ NeoBundle 'vim-scripts/newspaper.vim'
 "--------- for markdown ---------
 NeoBundle 'plasticboy/vim-markdown'
 "NeoBundle 'kannokanno/previm'
+call neobundle#end()
 NeoBundleCheck
 
 
